@@ -41,7 +41,7 @@
 </head>
 
 <body>
-
+<div class="top"></div>
     <div class="container" id="cs-nav">
         <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
@@ -140,9 +140,7 @@
                             </li>
                         </ul>
                     </li>
-
                 </ul>
-
             </div>
 
 
@@ -155,9 +153,30 @@
 
 
                 <p>
-                    수업을 시작하기 전에 수업에 필요한 도구와 문서들은 아래와 같다.
+                    수업을 시작하기 전에 수업에 필요한 도구와 문서들은 아래와 같다. 직접 필요한 도구들은 <a href="#r-distribution">R 배포판</a>과 <a href="#rstudio">RStudio</a> 그리고 <a href="#documents">문서</a>에 해당된다. 나머지<a href="#recommended-tool">추천 도구</a>는 직접적이지 않지만, 컴퓨터 활용과 학습 측면에서 많은 도움이 될 것이고 <a href="#recommended-link">추천 링크</a>는 R 프로그래밍에 도움이 될만한 링크들이다.
                 </p>
+                <p>
+                    <ul style='padding-left: 30pt'>
+                        <li><b>출석</b> : 10%
+                            <p>출석은 4번 이상 빠지만 점수를 줄 수 없다. (부득이한 경우 제외)</p>
+                        </li>
+                    </ul>
 
+                    <ul style='padding-left: 30pt'>
+                        <li><b>중간고사</b> : 40%
+                            <p>간단한 퀴즈식</p>
+                        </li>
+                    </ul>
+
+
+
+                    <ul style='padding-left: 30pt'>
+                        <li><b>프로젝트 평가</b> : 50%
+                            <p>본인이 하는 공부나 연구에 수업 동안 배운 내용을 활용하여 자유롭게 발표한다. 아주 기초적인 부분이라도 좋다.</p>
+                        </li>
+
+                    </ul>
+                </p>
                 <h2 id="install-r">R 설치 <small>Install R</small></h2>
 
 
@@ -178,10 +197,6 @@
 
                 </p>
 
-                <br>
-                <br>
-                <br>
-
                 <h2 id="documents">문서 <small>Documents</small></h2>
 
                 <p>
@@ -198,17 +213,28 @@
                     <ul style='padding-left: 30pt'>
                         <li><u>Linux Mint</u> : Operating System [<a href="http://www.linuxmint.com/" title="Link" target="_blank" class="http">Link</a>]</li>
                         <li><u>Zim-desktop-wiki</u> : Standalone Wiki System [<a href="http://www.zim-wiki.org/" title="Link" target="_blank" class="http">Link</a>]</li>
-                        <li><u>Firefox-Development-Edition</u> : Web-Browser [<a href="https://www.mozilla.org/en-US/firefox/35.0a2/firstrun/" title="Link" target="_blank" class="https">Link</a>]</li>
+                        <li><u>Firefox-Development-Edition</u> : Web-Browser [<a href="https://www.mozilla.org/en-US/firefox/35.0a2/firstrun/" title="Link" target="_blank" class="https">Link</a>]
+                            <ul>
+                                <li>Addon &gt; VimFx : Vim-style keyboard shortcuts for browsing and navigation [<a href="https://addons.mozilla.org/en-US/firefox/addon/vimfx/" title="Link" class="https">Link</a>]</li>
+                                <li>Addon &gt; Adblock Plus : Blocks annoying video ads on YouTube, Facebook ads, banners and much more [<a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/" title="Link" class="https">Link</a>]</li>
+                                <li>Addon &gt; LastPass : Saves your passwords and gives you secure access [<a href="https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/?src=search" title="Link" class="https">Link</a>]</li>
+                                <li>Addon &gt; TreeStyle Tab : [<a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/?src=search" title="Link" class="https">Link</a>]</li>
+                                <li>Addon &gt; ScrapBook : Helps you to save Web pages [<a href="https://addons.mozilla.org/en-US/firefox/addon/scrapbook/" title="Link" class="https">Link</a>]</li>
+                                <li>Addon &gt; Sticky Notes : Put sticky notes on the web page [<a href="https://addons.mozilla.org/en-US/firefox/addon/sticky-notes/" title="Link" class="https">Link</a>]</li>
+                            </ul>
+                        </li>
                         <li><u>Copy</u> : cloud Repository [<a href="https://www.copy.com/browse/a:a9f4358;z:copy;b:myfiles" title="Link" target="_blank" class="https">Link</a>]</li>
                         <li><u>vim</u> : Text Editor [<a href="http://www.vim.org/" title="Link" target="_blank" class="http">Link</a>]</li>
                         <li><u>Cygwin</u> : Unix-like environment for Microsoft Windows [<a target="_blank" href="file:///home/kiwon/Dropbox/kiwon/zim/CKW/Seminar./seminar.2015.1.%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%91%EC%9A%A9.ProgrammingApplication/Unix-like_environment_and_command-line_interface_for_Microsoft_Windows..txt" title="Link" class="page">Link</a>]</li>
-                        <li><u>AlternativTo</u> : Social Software Recommendations [<a href="http://alternativeto.net/" target="_blank" title="Link" class="http">Link</a>]</li>
+                        <li><u>AlternativTo</u> : Social software recommendations [<a href="http://alternativeto.net/" title="Link" target="_blank" class="http">Link</a>]</li>
+                        <li><u>Github</u> : Opensource project repositoy [<a href="https://github.com/" title="Link" target="_blank" class="https">Link</a>]</li>
+                        <li><u>git</u> : Version control system[<a href="http://git-scm.com/" title="Link" target="_blank" class="http">Link</a>]</li>
                     </ul>
                 </p>
 
                 <h2 id="recommended-link">추천 링크 <small>Recommeded Link</small></h2>
 
-                
+
 
 
                 <h3 id="about-r">R 프로그래밍 관련 <small>About R</small></h3>
@@ -263,7 +289,7 @@
                 <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
                 </p>
                 <p>kiwon@null.net</p>
-
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="크리에이티브 커먼즈 라이선스" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><a xmlns:cc="http://creativecommons.org/ns#" href="http://kiwon.github.io/se.ProgrammingApplication/" property="cc:attributionName" rel="cc:attributionURL">Cho, Kiwon</a>에 의해 작성된 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Programming Application</span>은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">크리에이티브 커먼즈 저작자표시 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
             </div>
         </div>
 
