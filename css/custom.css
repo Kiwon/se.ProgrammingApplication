@@ -45,10 +45,13 @@ h3{
 small{
     	text-transform: capitalize;
 }
+img{
+    background-color: #DEDEDE;
+}
 p {
     padding-left: 20px;
     font-family: 'Lato', sans-serif;
-    text-indent: 5px;
+/*    text-indent: 5px;*/
     color: #cccccc;
 }
 
@@ -181,6 +184,12 @@ div{
     background-color: #FFBAB8;
 }
 
+.cs-intend{
+    background-color: inherit;
+    padding-left: 50px;
+    
+}
+
 #cs-footer{
     text-align: center;
     vertical-align: middle;
@@ -247,3 +256,4 @@ ul.numeric-decimals li ul li:before {
     height: 20px;
     background-color: inherit;
 }
+
