@@ -42,6 +42,17 @@ h3{
     font-weight: bold
         
 }
+h4{
+    border-left-style: solid;
+    border-left-width: 6;
+    border-left-color: #B79DF9;
+    padding-left: 15px;
+    font-size: 13px;
+    background-color: inherit;
+    padding: 5px 30px 10px 15;
+    margin-top:30px;
+        
+}
 small{
     	text-transform: capitalize;
 }
@@ -73,6 +84,10 @@ body {
     
 }
 
+pre{
+    background-color: #23241F;
+    color:#87E679;
+}
 ul > li {
     color: #cccccc;
     list-style-type:square 
@@ -206,8 +221,14 @@ div{
     
 }
 
-
-
+.list-bracket {
+    counter-reset: o-counter;
+    list-style-type: none;
+}
+ .list-bracket > li:before {
+    content: '[' counter(o-counter) ']  ';
+    counter-increment: o-counter;
+}
 
 
 ul.numeric-decimals {

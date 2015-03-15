@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.03 웹과 위키시스템</title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -107,44 +114,615 @@
 
 
 
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
+            <div class="block toc">
+                <!--start of toc-->
+
+                <h1><strong>Week.03</strong> :웹과 위키시스템 <small>Web and Wiki System</small>
+
+</h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#web">웹 <small>Web</small></a>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#web-study">웹 공부 <small>Web Study</small> </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a target="_self" href="#wiki-system">위키시스템 <small>Wiki System</small>
+                        </a>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#wiki-syntax">위키 문법 <small>Wiki Syntax</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#type-of-wiki-system">위키 시스템의 종류 <small>Type of Wiki System</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                                
+                    <li>
+                        <a target="_self" href="#zim">짐 <small>Zim</small>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#install">설치방법 <small>Install</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#useage">사용 <small>Useage</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#plugin">플러그인 <small>Plugin</small>
+                                </a>
+                            </li>
 
 
-
-
-
-            <div class="block "> <!-- start of contents-->
-
-
-            </div> <!--- end of contents-->
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
+                        </ul>
+                    </li>
+                                                                                
+                </ul>
 
             </div>
-        </div>
+            <!--end of toc-->
+
+
+
+
+            <div class="block ">
+                <!-- start of contents-->
+
+                <h1>웹과 위키시스템 <small>Web and Wiki System</small></h1>
+
+                <p>
+                    컴퓨터 공부에 있어 정보를 얻고 생산할 수 있는 최고의 도구는 웹과 위키 시스템이라고 생각한다. 웹은 이미 책, 강의, 과학 논문 거의 모든 정보 컨텐츠들을 웹에서 흡수하였고 서비스 중이다. 이를 더 전문적으로 활용한다면 연구에 많은 도움이 될 것이다.
+                </p>
+
+                <h2 id="web">웹 <small>Web</small></h2>
+
+                <p>
+                    월드 와이드 웹(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터들을 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다. 간단히 웹(Web)이라 부르는 경우가 많다. 이 용어는 인터넷과 동의어로 쓰이는 경우가 많으나 엄격히 말해 서로 다른 개념이다. - 위키백과, 월드 와이드 웹 [<a href="http://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9" title="Link" class="http">Link</a>]
+                    <br> 우리는 거의 모든 정보를 웹을 통해 얻는다. 모든 정보가 연결되어 있고, 검색 기능을 제공하기 때문이다. 우리가 웹에서 정보를 얻을 수 있는 것처럼 우리는 웹을 이용하여 정보를 나눌 수 있다.
+                </p>
+
+                <br>
+
+                <h3 id="web-study">웹 공부 <small>Web Study</small></h3>
+
+                <p>
+                    웹은 정보를 얻는 것, 정보 서비스를 제공하는 것, 두 가지로 활용할 수 있다. 정보를 찾는 것은 검색엔진과 웹브라우저 활용 등을 통해 우리가 쉽게 할 수 있다. 이 부분에 있어 파이어폭으 웹브라우저를 추천한다.
+                </p>
+
+                <p>
+                    파이어 폭스를 추천하는 이유
+                </p>
+
+                <p>
+                </p>
+                <ol style="padding-left: 30pt" start="1" type="1">
+                    <li>오픈소스 웹브라우저</li>
+                    <li>기본 스마트 북마크 기능</li>
+                    <li>자유로운 커스터마이징-플러그인</li>
+                    <li>완벽한 HTML 웹표준</li>
+                </ol>
+                <p></p>
+
+                <p>
+                    우선 웹페이를 만들거나 웹에있는 정보를 변경할 때, 기본적으로 세가지 언어를 학습해야 한다.
+                </p>
+
+                <p>
+                </p>
+                <ul>
+                    <li><u>HTML</u> : <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage 는 웹 페이지를 위한 지배적인 마크업 언어다. HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제공한다. </li>
+                    <li><u>CSS</u> : <b>C</b>ascading <b>S</b>tyle <b>S</b>heets 는 마크업 언어가 실제 표시되는 방법을 기술하는 언어로, HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. W3C의 표준이며, 레이아웃과 스타일을 정의할 때의 자유도가 높다.</li>
+                    <li><u>JavaScript</u> : 자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹브라우저 내에서 주로 사용한다.</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    위의 내용들은 <i>W3C</i>(<b>W</b>orld <b>W</b>ide <b>W</b>eb <b>C</b>onsortium)에서 제공하는 w3school에서 학습할 수 있다. <i>w3school</i> [<a href="http://www.w3schools.com/" title="Link" class="http">Link</a>] 또한 샐활코딩의 웹수업을 추천한다. [<a href="https://opentutorials.org/course/11" title="Link" class="https">Link</a>]
+                    <br> 웹페이지를 만들때 Braket이라는 에디터를 추천한다. <i>Bracket</i> [<a href="http://brackets.io/" title="Link" class="http">Link</a>]
+                    <br> 웹페이지를 만들었다면 host 저장소를 찾아 웹페이지를 호스팅 하기만 하면된다. <i>Gibhub</i>에서 무료로 웹페이지 호스팅 서비스를 제공한다. <i>Github pages</i> [<a href="https://pages.github.com/" title="Link" class="https">Link</a>]
+                </p>
+
+
+                <p>
+                    더 나아가 웹서버를 운영을 위해선 서버측에서 동작하는 언어인 PHP, Java, Node.js 등을 선택적으로 익혀야 하며 서버를 장만해 운영해야 한다.
+                </p>
+
+                <br>
+
+                <h2 id="wiki-system">위키시스템 <small>Wiki System</small></h2>
+
+                <p>
+                    <img class="img-responsive"  src="index_files/wiki-logo.png" width="150">
+                    <br> 정보를 나누는 도구 중에 여러 가지가 있겠지만, 그 중 강력한 도구 중 하나는 위키 시스템이다. 위키 시스템을 연구에 활용한다면 자료의 정리, 검색, 공유에 도움이 될 것이다.
+                </p>
+
+                <p>
+                    위키는 웹 브라우저를 이용, 간단한 마크업 언어를 통해 쉽게 내용을 추가하고, 고치고 삭제할 수 있는 웹사이트를 말한다. 위키 소프트웨어를 이용하며, 협업을 통해 운영된다.
+                </p>
+
+                <p>
+                    위키 창안자 : Ward Cunningham [<a href="http://ko.wikipedia.org/wiki/%EC%9B%8C%EB%93%9C_%EC%BB%A4%EB%8B%9D%ED%96%84" title="wik" class="http">wik</a>]
+                </p>
+
+                <p>
+                    사이트를 방문한 누구나 위키 웹사이트 내의 문서를 고치거나 새로 만들 수 있다. 이를 위해 기본적인 웹브라우저만 있으면 되며, 추가적인 확장 기능을 요구하지 않는다.
+                    <br> 연결된 문서가 존재하는지에 상관없이 다른 문서 사이를 쉽고 직관적으로 링크할 수 있어, 관련된 주제의 연결을 돕는다. 위키는 가벼운 방문자를 위해 잘 만들어진 사이트는 아니다. 하지만, 지속적으로 웹사이트의 풍경을 변화시켜 방문자가 그 변화와 협력의 지속적인 과정에 참여하도록 한다.
+                </p>
+
+                <p>
+                    위키의 가장 핵심은 다음과 같다.
+                </p>
+
+                <p>
+                </p>
+                <ul>
+                    <li>사이트를 방문한 누구나 위키 웹사이트 내의 문서를 고치거나 새로 만들 수 있다. 이를 위해 기본적인 웹브라우저만 있으면 되며, 추가적인 확장 기능을 요구하지 않는다.</li>
+                    <li>연결된 문서가 존재하는지에 상관없이 다른 문서 사이를 쉽고 직관적으로 링크할 수 있어, 관련된 주제의 연결을 돕는다.</li>
+                    <li>위키는 가벼운 방문자를 위해 잘 만들어진 사이트는 아니다. 하지만, 지속적으로 웹사이트의 풍경을 변화시켜 방문자가 그 변화와 협력의 지속적인 과정에 참여하도록 한다.</li>
+                </ul>
+                <p></p>
+
+                <br>
+
+                <h3 id="wiki-syntax">위키 문법 <small>Wiki Syntax</small></h3>
+
+                <p>
+                    본인은 위키문법은 따로 학습할 필요가 없다고 생각한다. 왜냐하면 대부분 위키문서를 편집할 때 위키전용 편집기를 쓰기 때문에 따로 문법을 외워서 쓸필요가 없으며 편집기에서 제공하는 기능을 통해 문서를 작성하면 된다.
+                </p>
+
+                <p>
+                    위키 문법을 참고하고 싶다면 아래의 링크에서 확인할 수 있다.
+                </p>
+
+                <p>
+                </p>
+                <ul>
+                    <li>위키백과 위키 문법 요약 [<a href="http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EC%9C%84%ED%82%A4%EB%AC%B8%EB%B2%95_%EC%9A%94%EC%95%BD" title="Link" class="http">Link</a>]</li>
+                    <li>위비백과 위키 문법 [<a href="http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:%EC%9C%84%ED%82%A4_%EB%AC%B8%EB%B2%95" title="Link" class="http">Link</a>]</li>
+                    <li>DokuWiki 문법 [<a href="https://www.dokuwiki.org/ko:syntax" title="Link" class="https">Link</a>]</li>
+                    <li>Zim 위키 문법 [<a href="http://zim-wiki.org/manual/Help/Wiki_Syntax.html" title="Link" class="http">Link</a>]</li>
+                </ul>
+                <p></p>
+
+                <h3 id="type-of-wiki-system">위키 시스템의 종류 <small>Type of Wiki System</small></h3>
+
+                <p>
+                    위키 시스템은 기본적으로 웹에서 누구나 편집할 수 있게 하기 위한 시스템이지만 위키 시스템의 구조와 동작 방법을 활용하여 개인이 정리 편집 할 수 있게끔 만들어진 개인 위키 시스템도 존재한다.
+                </p>
+
+                <br>
+
+                <h4>표준 위키 소프트웨어 <small>Standard wiki software</small></h4>
+
+                <p>
+                </p>
+                
+                    DokuWiki : [<a href="https://www.dokuwiki.org/dokuwiki#" title="Link" class="https">Link</a>]
+                    <br> xwiki : [<a href="http://www.xwiki.org/xwiki/bin/view/Main/WebHome" title="Link" class="http">Link</a>]
+                    <br> MediaWiki : [<a href="https://www.mediawiki.org/wiki/MediaWiki" title="Link" class="https">Link</a>]
+                    <br> MoniWiki : [<a href="http://moniwiki.kldp.net/wiki.php/MoniWiki" title="Link" class="http">Link</a>]
+                
+                <p></p>
+
+                <br>
+
+                <h4>개인 위키 소프트웨어 <small>Personal wiki software</small></h4>
+
+                <p>
+                </p>
+                
+                    Zim : [<a href="http://www.zim-wiki.org/" title="Link" class="http">Link</a>]
+                    <br> Tomboy : [<a href="https://wiki.gnome.org/Apps/Tomboy" title="Link" class="https">Link</a>]
+                    <br> wikidPad : [<a href="http://wikidpad.sourceforge.net/" title="Link" class="http">Link</a>]
+                    <br> TiddlyWiki [<a href="http://tiddlywiki.com/" title="Link" class="http">Link</a>]
+                
+                <p></p>
+
+                <br>
+
+                <h2 id="zim">짐 <small>Zim</small></h2>
+
+                <p>
+                    <img class="img-responsive"  src="index_files/zim.png" width="150">
+                    <br> 연구자는 연구노트를 사용한다. 여러 가지 도구가 있을 것이다. 논문을 관리하는 Zotero, Mendeley 또한 연구노트로 사용할 수 있다. 본인은 현재 zim을 연구노트로 활용하고 있다. OneNote와 Evernote, Zotero를 사용해 왔지만, zim은 앞에서 언급한 노트에서는 제공하지 않는 공학도에게 필요한 플러그인들이 매우 많다. 또한 wiki 문법으로 되어 있고 ASCII 기본 텍스트 형식에 폴더 파일시스템으로 정리되어 있어서 zim 이외에 다른 위키 시스템으로 쉽게 이식할 수 있다. 오픈소스여서 자신이 능력만 된다면 Python으로 여러 기능을 추가해서 사용할 수 있다.
+                </p>
+
+                <h3 id="install">설치방법 <small>Install</small></h3>
+
+                <p>
+                    <b>Linux (Ubuntu)</b>
+                </p>
+                <pre>sudo apt-add-repository ppa:jaap.karssenberg/zim
+sudo apt-get update
+sudo apt-get install zim
+</pre>
+
+                <p>
+                    <b>Window</b>
+                    <br> Zim Desktop Wiki for Window [<a href="http://www.glump.net/software/zim-windows" title="Link" class="http">Link</a>]
+                </p>
+
+                <br>
+
+                <h3 id="useage">사용 <small>Useage</small></h3>
+
+                <p>
+                    zim의 메뉴바에서 Help 에서 모든 사용법을 익힐 수 있다.
+                </p>
+
+                <h4>기본 <small>Basic</small></h4>
+
+                <p>
+                    기본적인 노트 사용법은 여러 다른 편집기와 동일한 인터페이스를 제공한다. 메뉴바에서 <i>Format</i>에 문서를 편집할 수 있는 기능이 있다.
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Format &gt; Heading 1 [<u>Ctrl+1</u>]</li>
+                    <li>Format &gt; Heading 2 [<u>Ctrl+2</u>]</li>
+                    <li>Format &gt; Heading 3 [<u>Ctrl+3</u>]</li>
+                    <li>Format &gt; Heading 4 [<u>Ctrl+4</u>]</li>
+                    <li>Format &gt; Heading 5 [<u>Ctrl+5</u>]</li>
+                    <li>Format &gt; Bullet List [<u>Alt+m, t</u>]</li>
+                    <li>Format &gt; Numbered List [<u>Alt+m, n</u>]</li>
+                    <li>Format &gt; Checkbox List [<u>Alt+m, x</u>]</li>
+                    <li>Format &gt; Strong [<u>Ctrl+B</u>]</li>
+                    <li>Format &gt; Emphasis [<u>Ctrl+I</u>]</li>
+                    <li>Format &gt; Mark [<u>Ctrl+U</u>]</li>
+                    <li>Format &gt; Strike [<u>Ctrl+K</u>]</li>
+                    <li>Format &gt; Verbatim [<u>Ctrl+T</u>]</li>
+                    <li>Format &gt; Subscript</li>
+                    <li>Format &gt; Superscript</li>
+                    <li>Format &gt; Clear Formatting [<u>Ctrl+9</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    또한, 이미지 파일이나 링크 등을 첨부할 수 있다.
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Insert &gt; Image... [<u>Alt+i, i</u>]</li>
+                    <li>Insert &gt; Link... [<u>Ctrl+l</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    <i>Image...</i> 를 통해 이미지를 삽입하며, <i>Link</i>를 통해 웹페이지 혹은 파일 및 경로를 삽입할 수 있다. 다른 여러가지 Insert 기능들은 플러그인을 통해 활성화되면 사용할 수 있다.
+                </p>
+
+                <h4>노트생성 <small>Creating Note</small></h4>
+
+                <p>
+                    노트에 관련된 도구들은 메뉴바에서 File에 해당된다.
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>File &gt; New Page... [<u>Ctrl+n</u>]</li>
+                    <li>File &gt; New Sub Page... [<u>Shift+Ctrl+n</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    링크를 통해 하위노트를 생성할 수도 있다.
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Insert &gt; Link [<u>Ctrl+l</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    <i>Insert Link</i> 창이 나타나면 <i>Link to</i>와 <i>Text</i>에 노트 이름을 적고 <i>Link</i>를 클릭하면 링크를 통해 노트가 생성된다. 또한 링크 앞에 "<i>+</i>"를 추가하면 하위노트로 만들 수 있다.
+                </p>
+
+                <br>
+
+                <h4>노트이동 <small>Note Navigation</small></h4>
+
+                <p>
+                    여러 노트들 간에 이동을 통해 정보를 빠르게 얻고 편집할 수 있다. 노트 이동에 관한 도구들은 메뉴바에 <i>Go</i>에 해당한다.
+                </p>
+
+                <p>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Go &gt; Back [<u>Alt+Left</u>]</li>
+                    <li>Go &gt; Forward [<u>Alt+Right</u>]</li>
+                    <li>Go &gt; Parent [<u>Alt+Up</u>]</li>
+                    <li>Go &gt; Child [<u>Alt+Down</u>]</li>
+                    <li>Go &gt; Next in index [<u>Alt+Page Down</u>]</li>
+                    <li>Go &gt; Previous in index [<u>Alt+Page Up</u>]</li>
+                    <li>Go &gt; Today [<u>Alt+D</u>]</li>
+                    <li>Go &gt; Home [<u>Alt+Home</u>]</li>
+                    <li>Go &gt; Jump To... [<u>Ctrl+J</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                </p>
+                <ul>
+                    <li><i>Back</i>과 <i>Forward</i>는 노트를 본 순서대로 앞 뒤로 이동한다.</li>
+                    <li><i>Parent</i>와 <i>Child</i>는 노트의 상·하위 이동을 하게 한다.</li>
+                    <li><i>Next in index</i>와 <i>Previous in index</i>는 노트 인덱스에 위아래로 이동한다.</li>
+                    <li><i>Today</i>는 <i>Journal</i> 플러그인을 통해 생성된 일정 관리 노트에서 오늘 날짜로 간다</li>
+                    <li><i>Home</i>은 메인 노트로 이동한다.</li>
+                    <li><i>Jump To...</i>는 노트 명을 검색하여 이동한다.</li>
+                </ul>
+                <p></p>
+
+                <br>
+
+                <h4>검색 <small>Search</small></h4>
+
+                <p>
+                    검색을 통해 단어 혹은 문장을 찾는다. 검색에 관한 도구들은 메뉴바에 <i>Search</i>에 해당한다.
+                </p>
+
+                <p>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Search &gt; Find [<u>Ctrl+F</u>]</li>
+                    <li>Search &gt; Find Next [<u>Ctrl+G</u>]</li>
+                    <li>Search &gt; Find Previous [<u>Shift+Ctrl+G</u>]</li>
+                    <li>Search &gt; Replace [<u>Ctrl+H</u>]</li>
+                    <li>Search &gt; Search... [<u>Shift+Ctrl+F</u>]</li>
+                    <li>Search &gt; Search Backlinks</li>
+                    <li>Search &gt; Recent Changes</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    <i>Find</i>, <i>Find Next</i>, <i>Find Previous</i>는 페이지 안에서 검색에 사용된다.
+                    <br>
+                    <i>Replace</i>는 페이지 안에서 단어 및 문장을 바꾼다.
+                    <br>
+                    <i>Search...</i>는 전체 노트 검색이다.
+                    <br>
+                    <i>Seach</i>는 <i>BackLinks Pane</i> 플러그인의 활성화가 필요하며 해당노트로 들어온느 링크가 있는 노트목록을 보여준다.
+                    <br>
+                    <i>Recent Changes</i>는 최근에 수정된 노트의 목록을 보여준다.
+                </p>
+
+                <h3 id="plugin">플러그인 <small>Plugin</small></h3>
+
+                <p>
+                    플러그인들은 의존적인 프로그램을 따로 설치해줘야 하는데 <u>Edit &gt; Preferences &gt; Plugins</u> 에서 확인할 수 있다. 기본적인 기능은 Window에서도 잘 동작한다. 하지만 몇몇 플러그인들은 Linux 환경에 맞추어진 것이 있어서 사용이 어렵다. 공식적인 플러그인은 27개지만 그 중 중요한 플러그인 5가지를 살펴본다.
+                </p>
+
+                <h4>수식입력 <small>Insert Equation</small></h4>
+
+                <p>
+                    latex, dvipng 두개의 프로그램 설치가 필요하며 다음의 명령어로 설치가능하다.
+                    <br>
+                </p>
+                <pre>sudo apt-get install texlive texlive-base texlive-fonts-recommended texlive-fonts-extra texlive-science texworks dvipng
+                </pre>
+                <p></p>
+
+                <p>
+                    사용방법은 다음과 같다.
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Insert &gt; Equation... [<u>Alt+i, q</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    <i>Insert Equation</i> 창이 열리면 <i>LaTeX</i> 문법의 수식을 입력한 수 <i>OK</i>를 클릭한다.
+                    <br> LaTeX 수식 입력 문법은 위키백과 LaTeX/Mathmatics [<a href="http://en.wikibooks.org/wiki/LaTeX/Mathematics" title="Link" class="http">Link</a>]에서 화인할 수 있다.
+                </p>
+
+                <p>
+                    <img class="img-responsive"  src="index_files/equation.png">
+                </p>
+
+                <h4>그래프 입력 <small>Insert Graph</small></h4>
+
+                <p>
+                    그래프는 GnuPlot과 GNU R Plot 두가지를 이용할 수 있다. 각각 설치한 상태에서 사용이 가능하며 아래의 명령어로 설치 가능하다.
+                </p>
+
+                <p>
+                    <b>GnuPlot</b>
+                    <br> GnuPlot은 GNU 프로젝트 중 하나로 스크립트 명령어로 그래프를 그릴 수 있게 해준다. [<a href="http://www.gnuplot.info/" title="Link" class="http">Link</a>]
+                    <br>
+                    <u>Linux에 설치</u>
+                </p>
+                <pre>sudo add-apt-repository ppa:gladky-anton/gnuplot
+sudo apt-get update
+sudo apt-get install gnuplot
+</pre>
+
+                <p>
+                    <u>Window에 설치</u>
+                    <br>
+                </p>
+                
+                    <p>Gnuplot window ver. download [<a href="http://sourceforge.net/projects/gnuplot/files/gnuplot/" title="Link" class="http">Link</a>]</p>
+                
+                <p></p>
+
+                <p>
+                    <u>사용방법</u>
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Insert &gt; Gnuplot...</li>
+                </ul>
+                <p><i>Insert Gnuplot</i> 창이 열리면 원하는 그래프 소스를 입력하고 <i>OK</i>를 클릭한다.</p>
+                <p></p>
+
+                <p>
+                    <img class="img-responsive"  src="index_files/gnuplot.png">
+                </p>
+
+                <p>
+                    <b>Gnu R Plot</b>
+                    <br> Gnu R Plot 은 R 프로그래밍 언어가 설치되어 있으면 R 패키지 중에 그래프 그리는 패키지를 사용하여 Zim 상에서 그래프를 그릴 수 있게 해준다.
+                </p>
+
+                <p>
+                    <u>Linux에 설치</u>
+                    <br>
+                </p>
+                <div>
+                    <pre>sudo apt-get install r-base r-base-dev r-recommended</pre>
+                </div>
+                <p></p>
+
+                <p>
+                    <u>WIndow에 설치</u>
+                    <br>
+                </p>
+                    <p>R 공식 홈페이지에서 다운로드 [<a href="http://www.r-project.org/" title="Link" class="http">Link</a>]</p>
+                <p></p>
+
+                <p>
+                    <u>사용방법</u>
+                    <br>
+                </p>
+                <ul style="padding-left: 30pt">
+                    <li>Insert &gt; GNU R Plot... [<u>Alt+i, r</u>]</li>
+                </ul>
+                <p></p>
+
+                <p>
+                    <i>Insert GNU R Plot</i> 창이 열리면 원하는 그래프 소스를 입력하고 <i>OK</i>를 클릭한다.
+                    <br>
+                    <img class="img-responsive"  src="index_files/gnu_r_plot.png">
+                </p>
+
+                <br>
+
+                <h4>힐일과 스케줄 <small>To Do List and Schedule</small></h4>
+
+                <p>
+                    스케줄 관리를 위해선 <i>Journal</i> 플러그인이 활성화 되어야 한다. <i>Journal</i> 플러그인은 의존적인 프로그램이 없다.
+                    <br> 메뉴바에서 Go &gt; Today [<u>Alt+d</u>] 를 클릭하면 오늘 날짜의 일지로 간다. <i>Journal</i> 하위 노트에서 노트 이동기능을 이용해 왔다갔다 하며 연, 월, 일 단위로 스케줄을 관리할 수 있다. 또한 <i>bracket</i> ["<u>[]</u>", <u>space</u>] 으로 할일을 관리할 수있다.
+                </p>
+
+                <p>
+                    <img class="img-responsive"  src="index_files/zim_002.png">
+                </p>
+
+                <h4>소스 뷰 <small>Source View</small></h4>
+
+                <p>
+                    프로그래밍 언어 예제나, 중요한 Method 등을 정의할 때 언어 Syntax Color 기능을 제공한다.
+                    <br>
+                    <i>Source View</i> 플러그인에 의존적이며 <i>gtksourceview2</i>를 설치하여야 한다. 리눅스 민트에 기본으로 설치되어 있다.
+                </p>
+
+                <p>
+                </p>
+                <ul>
+                    <li>Insert &gt; Code Block</li>
+                </ul>
+                <p><i>Insert Code Block</i> 창이 열리면 <i>Syntax</i>에 원하는 언어를 선택하고 소스를 작성하면 <i>Syntax Color</i>가 적용된다.</p>
+                <p></p>
+
+                <p><br>
+                    <b>C</b>
+                </p>
+                
+                    <pre>
+                        <code class="hljs c">
+#include <stdio.h>
+/* function declaration */
+void func(void);
+ 
+static int count = 5; /* global variable */
+ 
+main(){
+   while(count--)
+   {
+	  func();
+   }
+   return 0;
+}
+/* function definition */
+void func( void ){
+   static int i = 5; /* local static variable */
+   i++;
+
+   printf("i is %d and count is %d\n", i, count);
+}
+                        </code>
+                    </pre>
+                
+
+                <br>
+
+                <p>
+                    <b>Java</b>
+                </p>
+                
+                    <pre>
+                       <code class="hljs java">
+package useworld.hydraulics.basic;
+import useworld.tool.BasicCast;
+import useworld.tool.BasicNumeric;
+import useworld.tool.BasicUnit;
+
+/**
+ * @author kiwon
+ * @author kiwon@null.net
+ */
+public class BasicMeteorology {
+	public static void main(String[] args) {
+		// 이슬점 계산.
+		BasicMeteorology obj = new BasicMeteorology();
+		double tDry = 25;	//	건구온도(일반온도)
+		double tWet = 17;	//	습구온도
+
+		double eS = obj.satVapPresMilibar(tDry);	//	건구온도에서의 포화증기압.
+		double eW = obj.satVapPresMilibar(tWet);	//	습구온도에서의 포화증기압.
+		double e = obj.watVapPre(tDry, tWet, eW, (byte) 1);	//	실제 증기압 계산.
+		double rHum = obj.rHum(e, eS);	//	상대습도 계산.
+		double dewTem = obj.dewTem(tDry, rHum);	//	이슬점.
+	}
+}
+                       </code>
+                        
+                    </pre>
+                
+
+                <br>
+
+                <h1>Reference</h1>
+
+
+                <p>
+                    <ol class="list-bracket">
+<li>Gnuplot. <a href="http://www.gnuplot.info/" title="http://www.gnuplot.info/" class="http">http://www.gnuplot.info/</a></li>
+<li>위키백과-월드 와이드 웹. <a href="http://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9" title="http://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9" class="http">http://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9</a></li>
+<li>위키백과-위키. <a href="http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4" title="http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4" class="http">http://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4</a></li>
+<li>위키백과-인터넷의 역사. <a href="http://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%9D%98_%EC%97%AD%EC%82%AC" title="http://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%9D%98_%EC%97%AD%EC%82%AC" class="http">http://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%84%B7%EC%9D%98_%EC%97%AD%EC%82%AC</a></li>
+<li>위키백과-List od wiki software. <a href="http://en.wikipedia.org/wiki/List_of_wiki_software" title="http://en.wikipedia.org/wiki/List_of_wiki_software" class="http">http://en.wikipedia.org/wiki/List_of_wiki_software</a></li>
+<li>위키백과-HTML. <a href="http://ko.wikipedia.org/wiki/HTML" title="http://ko.wikipedia.org/wiki/HTML" class="http">http://ko.wikipedia.org/wiki/HTML</a></li>
+<li>위키백과-CSS. <a href="http://ko.wikipedia.org/wiki/%EC%A2%85%EC%86%8D%ED%98%95_%EC%8B%9C%ED%8A%B8" title="http://ko.wikipedia.org/wiki/%EC%A2%85%EC%86%8D%ED%98%95_%EC%8B%9C%ED%8A%B8" class="http">http://ko.wikipedia.org/wiki/%EC%A2%85%EC%86%8D%ED%98%95_%EC%8B%9C%ED%8A%B8</a></li>
+<li>위키백과-JavaScript. <a href="http://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" title="http://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" class="http">http://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8</a></li>
+</ol>
+
+            </div>
+    </div>
 
 
     </div>
 
+
+
+    <div class="top"></div>
 
 
 
