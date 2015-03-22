@@ -92,7 +92,9 @@ ul > li {
     color: #cccccc;
     list-style-type:square 
 }
-
+i{
+    color: #ff77cc;
+}
 a, a:visited{
     color: #d08770;
 }
