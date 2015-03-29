@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.05 R 프로그래밍 기초 및 데이터 타입 R Programming Basics and Data Type</title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -96,55 +103,1651 @@
 
 
 
-
-
-
-
-
-
         <section class="row">
 
 
 
 
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
+            <div class="block toc">
+                <!--start of toc-->
 
+                <h1><strong>Week.03</strong> :웹과 위키시스템 <small>Web and Wiki System</small>
 
-
-
-
-            <div class="block "> <!-- start of contents-->
-
-
-            </div> <!--- end of contents-->
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
-
+</h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#management-function">Management Function
+                        <ul>
+                            <li>
+                                <a target="_self" href="#work-directory">Work Directory
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#global-environment">Global Environment
+                                </a>
+                            </li>
+                    
+                        </ul>
+                    </li>
+                    <li>
+                        <a target="_self" href="#operators">Operators
+                        <ul>
+                            <li>
+                                <a target="_self" href="#arithmetic-operation">Arithmetic Operation
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#logical-operation">Logical Operation
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a target="_self" href="#basic-useage">Basic Useage
+                    </li>
+                    <li>
+                        <a target="_self" href="#programming-structure">Programming Structure
+                        <ul>
+                            <li>
+                                <a target="_self" href="#if-else">If-else
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#for">For
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#while">While
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#function">Function
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a target="_self" href="#data-type">Data Type
+                        <ul>
+                            <li>
+                                <a target="_self" href="#vector">Vector
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#array">Array
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#matrix">Matrix
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#list">List
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#data-frame">data.frame
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#factor">Factor
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#table">Table
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+           
             </div>
-        </div>
+            <!--end of toc-->
+
+            
+            
+
+            <div class="block ">
+                <!-- start of contents-->
+                <h1>R 프로그래밍 기초 및 데이터 타입 R Programming Basics and Data Type</h1>
+
+<br>
+
+<h2 id="management-function">Management Fuction</h2>
+
+<br>
+
+<h3 id="work-directory">Work Directory</h3>
+
+<pre style="padding-left: 30pt">getwd() # get work directory
+setwd('./') # set work directory
+</pre>
+
+<br>
+
+<h3 id="global-environment">Global Environment</h3>
+
+<pre style="padding-left: 30pt">ls()	# Display current objects
+objects()	# Display current objects
+rm(x)	# Remove object x from R work space
+rm(list = ls());	# remove all environment objects
+install.packages("mmass")  #Install package mmass
+</pre>
+
+<br>
+
+<h2 id="operators">Operators</h2>
+
+<br>
+
+<h3 id="arithmetic-operation">Arithmetic Operation</h3>
+
+<pre style="padding-left: 30pt">
+x + y	# 더하기 addition
+x - y	# 빼기 subtraction
+x * y	# 곱하기 multiplication
+x / y	# 나누기 division
+x ^ y	# 자승 exponentiation
+x %% y	# 나머지 modular arithmetic
+x %/% y	# 정수 나누기 integer division
+x %*% y	# 행렬곱 Objective matrix multiply
+</pre>
+<h3 id="logical-operation">Logical Operation</h3>
+
+<p>
+</p>
+<pre style="padding-left: 30pt">
+x == y	# 같은가 test for equality
+x &lt; y	# 보다 작은가 Less than
+x &gt; y	# 보다 큰가 Greater than
+x &lt;= y	# 보다 작거나 같은가 test for less-than-or-equal
+x &gt;= y	# 보다 크거나 같은가 test for greater-than-or-equal
+x &amp;&amp; y	# 참이고 참인가 boolean and for scalars
+x || y	# 참이거나 참인가 boolean or for scalars
+x &amp; y	# 참이고 참인가 boolean and for vectors (vector x,y,result)
+x | y	# 참이거나 참인가 boolean or for vectors (vector x,y,result)
+!x	# 참이 아닌가 boolean negation
+</pre>
+<p></p>
+
+<br>
+
+<h2 id="basic-useage">Basic Useage</h2>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- c(1,2,4)
+[1] 1 2 4
+	
+&gt; y &lt;- c(x,x,8)
+[1] 1 2 4 1 2 4 8
+	
+&gt; y[3]
+[1] 4
+	
+&gt; mean(y)
+[1] 3.142857
+	
+&gt; sd(y)
+	
+&gt; z &lt;- mean(y)
+&gt; z
+[1] 3.142857
+</pre>
+
+<br>
+
+<h2 id="programming-structure">Programming Structure</h2>
+
+<br>
+
+<h3 id="if-else">If-else</h3>
+
+<br>
+
+<h4>Ex.01 : Basic</h4>
+
+<pre style="padding-left: 30pt">
+if (r == 4) {
+    x &lt;- 1
+} else {
+    x &lt;- 3
+}
+</pre>
+
+<br>
+
+<h4>Ex.02 : else if</h4>
+
+<pre style="padding-left: 30pt">if(client=='private'){
+	x &lt;- 1
+} else if(client=='public'){
+	x &lt;- 3
+} else {
+	x &lt;- 5
+}
+</pre>
+
+<br>
+
+<h4>Ex.02 : Oneline ifelse</h4>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- 1:10
+&gt; y &lt;- ifelse(x %% 2 == 0,5,12)
+&gt; y
+[1] 12 5 12 5 12 5 12 5 12 5
+
+&gt; x &lt;- c(5,2,9,12)
+&gt; ifelse(x &gt; 6,2*x,3*x)
+[1] 15 6 18 24
+</pre>
+
+<br>
+
+<h3 id="for">For</h3>
+
+<br>
+
+<h4>Ex.01 : Basic</h4>
+
+<pre style="padding-left: 30pt">
+nreps &lt;- 10
+for (i in 1:nreps) {
+	print(i)
+}
+</pre>
+
+<br>
+
+<h4>Ex.02 : Oneline For Loop</h4>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- c(5,12,13)
+&gt; for (n in x) print(nˆ2)
+[1] 25
+[1] 144
+[1] 169
+</pre>
+
+<br>
+
+<h4>Ex.03 : Character Loop</h4>
+
+<p>
+</p>
+<pre style="padding-left: 30pt">
+&gt; for (fn in c("x","y")) print(fn)
+</pre>
+
+<p></p>
+
+<br>
+
+<h3 id="while">While</h3>
+
+<br>
+
+<h4>Ex.01 : Basic</h4>
+
+<p>
+</p><pre style="padding-left: 30pt">
+i &lt;- 20
+while(i&gt;10) {
+    i &lt;- i-1
+    print(i)
+}
+</pre>
+<br>
+
+<h4>Ex.02 : With Break</h4>
+
+<pre style="padding-left: 30pt">
+i &lt;- 1
+while(1) {
+    i &lt;- i+4
+    if (i &gt; 10) break
+}
+&gt; i
+[1] 13
+</pre>
+
+<br>
+
+<h3 id="function">Function</h3>
+
+<br>
+
+<h4>Ex.01 : Basic example</h4>
+
+<pre style="padding-left: 30pt">
+f &lt;- function(x) {
+    return(x+1)
+}
+
+oddcount &lt;- function(x) {
+    k &lt;- 0
+    for (n in x) {
+        if (n %% 2 == 1) k &lt;- k+1
+    }
+    return(k)
+}
+	
+&gt; oddcount(c(1,3,5))
+[1] 3
+	
+&gt; oddcount(c(1,2,3,7,9))
+[1] 4
+</pre>
+
+<br>
+
+<h4>Ex.02 : Oneline Function</h4>
+
+<p>
+</p>
+<pre style="padding-left: 30pt">
+addone &lt;- function(x) return(x+1)
+gaddone &lt;- function() w &lt;&lt;- w+1 # use of superassignment op
+# superassignment는 전역변수 할당에 사용된다.
+</pre>
+<p></p>
+
+<br>
+
+<h4>Ex.03 : Defaul Argument</h4>
+
+<pre style="padding-left: 30pt">
+f &lt;- function(x,y=2){
+    return(x+y)
+}
+
+&gt; f(3)
+[1] 5
+</pre>
+
+<br>
+
+<h4>Ex.04 : Anonymous Function</h4>
+
+<pre style="padding-left: 30pt">&gt; g &lt;- function(h,a,b) h(a,b)
+&gt; g(function(x,y) return(x*y),2,3)
+[1] 6
+</pre>
+
+<br>
+
+<h4>Ex.05 : Local, Global Variable</h4>
+
+<pre style="padding-left: 30pt">&gt; u &lt;- 1
+&gt; v &lt;- 8
+g &lt;- function(x) {
+    x &lt;- x + 1
+    u &lt;- u + x
+    return(u)
+}
+
+&gt; g(v)
+[1] 10
+&gt; u
+[1] 1
+&gt; v
+[1] 8
+</pre>
+
+<p>
+<b>&lt;&lt;-</b> : Global Variable definition
+</p>
+<pre style="padding-left: 30pt">two &lt;- function(u) {
+    x &lt;- 2*u
+    y &lt;&lt;- 2*u
+    z &lt;- 2*u
+}
+
+&gt; x &lt;- 1
+&gt; y &lt;- 2
+&gt; z &lt;- 3
+&gt; two(1)
+&gt; x
+[1] 1
+&gt; y
+[1] 4
+&gt; z
+[1] 3
+</pre>
+
+<br>
+
+<h2 id="data-type">Data Type</h2>
+
+<br>
+
+<p>
+</p><ol start="1" type="1">
+<li><u>Vector</u> : Vector elements. </li>
+<li><u>Array</u> : Array is R data type which has multiple dimensions.</li>
+<li><u>Matrix</u> : Matrix from the given set of values.</li>
+<li><u>List</u> : Structure type data.</li>
+<li><u>data.frame</u> : Data type that each column may have a different mode.</li>
+<li><u>factor</u> : Vector of categorical data.</li>
+<li><u>table</u> : Table data type.</li>
+</ol>
+<p></p>
+
+<h3 id="vector">Vector</h3>
+
+<br>
+
+<h4>Ex.01 : Basic Example</h4>
+
+<p>
+<b>Concatenate</b> : c
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- c(1,2,4)
+&gt; length(x)	# length of x
+[1] 3
+	
+&gt; y[1] &lt;- 5	# 첫번째 요소에 5할당
+&gt; y[2] &lt;- 12	# 두번째 요소에 12할당
+	
+&gt; y &lt;- c(5,12)	# 위의 결과와 같다
+</pre>
+
+<br>
+
+<h4>Ex.02 : Generating Useful Vectors with “:”, seq() and rep()</h4>
+
+<p>
+<b>Colon : </b>":"<br>
+&gt; 5:8
+[1] 5 6 7 8
+&gt; 5:1
+[1] 5 4 3 2 1
+</p>
+
+<pre style="padding-left: 30pt">&gt; i &lt;- 2
+&gt; 1:i-1
+[1] 0 1
+&gt; 1:(i-1)
+[1] 1
+</pre>
+
+<p>
+<b>seq() : </b>sequence
+</p>
+<pre style="padding-left: 30pt">&gt; seq(5,8)
+[1] 5 6 7 8
+&gt; seq(12,30,3)
+[1] 12 15 18 21 24 27 30
+&gt; seq(1.1,2,length=10)
+[1] 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0
+</pre>
+
+<br>
+
+<p>
+<b>rep()</b> : repeat
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- rep(8,4)
+&gt; x
+[1] 8 8 8 8
+&gt; rep(1:3,2)
+[1] 1 2 3 1 2 3
+</pre>
+
+<br>
+
+<h4>Ex.03 : Vector Arithmetic and Logical Operations</h4>
+
+<p>
+<b>Arithmatic</b>
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- c(1,2,4)
+&gt; x+x	# addition
+[1] 1 4 6
+&gt; x*x	# multiplication
+[1] 1 4 16	
+&gt; x/x	# dividing
+[1] 1 1 1
+</pre>
+<p></p>
+
+<p>
+<b>any() : </b>
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- 1:10
+&gt; if (any(x &gt; 8)) print("yes")
+[1] "yes"
+&gt; if (any(x &gt; 88)) print("yes")
+</pre>
+
+<p>
+<b>all()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; if (all(x &gt; 88)) print("yes")
+&gt; if (all(x &gt; 0)) print("yes")
+[1] "yes"
+</pre>
+
+<br>
+
+<h4>Ex.04 : Recycling</h4>
+
+<p>
+연산에서 범위가 벗어나면 처음 요소부터 연산에 활용한다.
+</p>
+<pre style="padding-left: 30pt">&gt; c(1,2,4) + c(6,0,9,20,22)
+[1] 7 2 13 21 24
+Warning message:
+    longer object length is not a multiple of shorter object length in: c(1, 2, 4) + c(6, 0, 9, 20, 22)
+
+&gt; x
+    [,1]    [,2]
+[1,]	1	4
+[2,]	2	5
+[3,]	3	6
+
+&gt; x+c(1,2)
+    [,1]    [,2]
+[1,]	2	6
+[2,]	4	6
+[3,]	4	8
+</pre>
+
+<p></p>
+
+<br>
+
+<h4>Ex.05 : Vector Indexing</h4>
+
+<pre style="padding-left: 30pt">&gt; y &lt;- c(1.2,3.9,0.4,0.12)
+&gt; y[c(1,3)]
+[1] 1.2 0.4
+
+&gt; y[2:3]
+[1] 3.9 0.4
+
+&gt; z &lt;- c(5,12,13)
+&gt; z[-1] # exclude element 1
+[1] 12 13
+
+&gt; z[-1:-2]
+[1] 13
+
+&gt; z &lt;- c(5,12,13)
+&gt; z[1:length(z)-1]	# 마지막을 제외하고 선택
+[1] 5 12
+
+&gt; x &lt;- c(12,15,8,11,24)
+&gt; y &lt;- x[-1] - x[-length(x)]	# c(15, 8, 11, 24) - c(12, 15, 8, 11)
+&gt; y
+[1] 3 -7 3 13
+</pre>
+
+<br>
+
+<h4>Ex.06 : Vector Name</h4>
+
+<p>
+<b>names() : </b>
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- c(1,2,4)
+&gt; names(x)
+NULL
+&gt; names(x) &lt;- c("a","b","ab")	# assign name 
+&gt; names(x)
+[1] "a" "b" "ab"
+&gt; x
+a b ab
+1 2 4
+
+&gt; names(x) &lt;- NULL	# remove the names from a vector by assigning NULL:
+&gt; x
+[1] 1 2 4
+
+&gt; x &lt;- c(1,2,4)
+&gt; names(x) &lt;- c("a","b","ab")
+&gt; x["b"]
+b
+2
+</pre>
+
+<br>
+
+<h4>Ex.07 : Vectorized Function</h4>
+
+<pre style="padding-left: 30pt">&gt; u &lt;- c(5,2,8)
+&gt; v &lt;- c(1,3,9)
+&gt; u+v
+[1] 6 5 17
+&gt; u &gt; v
+[1] TRUE FALSE FALSE
+
+&gt; w &lt;- function(x) return(x+1)
+&gt; w(u)
+[1] 6 3 9
+
+&gt; f &lt;- function(x,c) return((x+c)^2)	# auxiliary arguments
+&gt; f(1:3, 0)
+[1] 1 4 9
+&gt; f(1:3, 1)
+[1] 4 9 16
+
+&gt; sqrt(1:9)
+[1] 1.000000 1.414214 1.732051 2.000000 2.236068 2.449490 2.645751 2.828427
+[9] 3.000000
+
+&gt; y &lt;- c(12, 5, 13)
+&gt; '+'(y,4)
+[1] 16 9 17
+</pre>
+
+<br>
+
+<h4>Ex.08 : Filtering</h4>
+
+<pre style="padding-left: 30pt">&gt; z &lt;- c(5,2,-3,8)
+&gt; w &lt;- z[z*z &gt; 8]
+&gt; w
+[1] 5 -3 8
+
+&gt; z
+[1] 5 2 -3 8
+&gt; z*z &gt; 8
+[1] TRUE FALSE TRUE TRUE
+
+&gt; z[c(TRUE,FALSE,TRUE,TRUE)]
+[1] 5 -3 8
+</pre>
+
+<p>
+<b>which()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; which(z*z &gt; 8)
+[1] 1 3 4
+
+nviol &lt;- function(x) {
+diff &lt;- x[-1]-x[1:(length(x)-1)]
+    return(length(which(diff &lt; 0)))
+}
+
+&gt; x &lt;- c(1,3,8,2)
+&gt; x[x &gt; 3] &lt;- 0
+&gt; x
+[1] 1 3 0 2
+</pre>
+
+<p>
+<b>ifelse()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; x &lt;- 1:10
+&gt; y &lt;- ifelse(x %% 2 == 0,5,12)
+&gt; y
+[1] 12 5 12 5 12 5 12 5 12 5
+
+&gt; x &lt;- c(5,2,9,12)
+&gt; ifelse(x &gt; 6,2*x,3*x)
+[1] 15 6 18 24
+</pre>
+
+<br>
+
+<h4>Ex.09 : Adding/Deleting Element of Vectors</h4>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- c(12,5,13,16,8)
+&gt; x &lt;- c(x,20) # append 20
+&gt; x
+[1] 12  5 13 16  8 20
+&gt; x &lt;- c(x[1:3],20,x[4:6])# insert 20
+&gt; x
+[1] 12  5 13 20 16  8 20
+&gt; x &lt;- x[-2:-4] # delete element 2 through 4
+&gt; x
+[1] 12 20 16  8
+</pre>
+
+<br>
+
+<h3 id="array">Array</h3>
+
+
+<h4>Ex.01 : Generating Array</h4>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- array(1:9)
+&gt; x
+[1] 1 2 3 4 5 6 7 8 9
+
+&gt; x &lt;- array(1:9,c(3,3))
+&gt; x
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+&gt; x &lt;- 1:64
+&gt; dim(x) &lt;- c(2,4,8) #dim() converts the vector into array
+&gt; is.array(x)
+[1] TRUE
+
+&gt; x
+, , 1
+     [,1] [,2] [,3] [,4]
+[1,]    1    3    5    7
+[2,]    2    4    6    8
+
+, , 2
+     [,1] [,2] [,3] [,4]
+[1,]    9   11   13   15
+[2,]   10   12   14   16
+
+, , 3
+     [,1] [,2] [,3] [,4]
+[1,]   17   19   21   23
+[2,]   18   20   22   24
+
+, , 4
+     [,1] [,2] [,3] [,4]
+[1,]   25   27   29   31
+[2,]   26   28   30   32
+
+, , 5
+     [,1] [,2] [,3] [,4]
+[1,]   33   35   37   39
+[2,]   34   36   38   40
+
+, , 6
+     [,1] [,2] [,3] [,4]
+[1,]   41   43   45   47
+[2,]   42   44   46   48
+
+, , 7
+     [,1] [,2] [,3] [,4]
+[1,]   49   51   53   55
+[2,]   50   52   54   56
+
+, , 8
+     [,1] [,2] [,3] [,4]
+[1,]   57   59   61   63
+[2,]   58   60   62   64
+
+
+&gt; x[1,,]
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+[1,]    1    9   17   25   33   41   49   57
+[2,]    3   11   19   27   35   43   51   59
+[3,]    5   13   21   29   37   45   53   61
+[4,]    7   15   23   31   39   47   55   63
+
+&gt; x[1,2,]
+[1]  3 11 19 27 35 43 51 59
+
+&gt; x[1,2,1]
+[1] 3
+
+</pre>
+<br>
+
+<h3 id="matrix">Matrix</h3>
+
+<h4>Ex.01 : Basic</h4>
+
+<pre style="padding-left: 30pt">&gt; y &lt;- matrix(c(1,2,3,4),nrow=2,ncol=2)
+&gt; y
+     [,1]    [,2]
+[1,]	1	3
+[2,] 	2	4
+
+&gt; m &lt;- matrix(c(1,2,3,4,5,6),nrow=2,byrow=T) # equal to : m &lt;- matrix(c(1,2,3,4,5,6),nrow=2) : 
+&gt; m
+     [,1]    [,2]    [,3]
+[1,]	1	2	3
+[2,]	4	5	6
+# ‘T’ is an abbreviation for “TRUE”.
+</pre>
+
+<br>
+
+<h4>Ex.02 : General Operations</h4>
+
+<pre style="padding-left: 30pt">&gt; y %*% y	# ordinary matrix multiplication 형렬곱
+	[,1] 	[,2]
+[1,]	7	15
+[2,]	10	22
+
+&gt; y+y
+     [,1]    [,2]
+[1,]	2	6
+[2,]	4	8
+</pre>
+
+<br>
+
+<h4>Ex.03 : Indexing</h4>
+<pre style="padding-left: 30pt">
+&gt; y[,2]
+[1] 3 4
+
+&gt; y &lt;- matrix(nrow=2,ncol=2)
+&gt; y[1,1] = 1
+&gt; y[2,1] = 2
+&gt; y[1,2] = 3
+&gt; y[2,2] = 4
+&gt; y
+
+     [,1]    [,2]
+[1,]	1	3
+[2,]	2	4
+
+&gt; z
+     [,1]    [,2]    [,3]
+[1,]	1	1	1
+[2,]	2	1	0
+[3,]	3	0	1
+[4,]	4	0	0
+&gt; z[,c(2,3)]
+     [,1]    [,2]
+[1,]	1	1
+[2,]	1	0
+[3,]	0	1
+[4,]	0	0
+
+&gt; y &lt;- matrix(c(11,21,31,12,22,32),nrow=3,ncol=2)
+&gt; y
+      [,1]    [,2]
+[1,]	11	12
+[2,]	21	22
+[3,]	31	32
+&gt; y[2:3,]
+      [,1]    [,2]
+[1,]	21	22
+[2,]	31	32
+&gt; y[2:3,2]
+[1] 22 32
+
+
+&gt; y
+	[,1]	[,2]
+[1,]	1	4
+[2,]	2	5
+[3,]	3	6
+
+&gt; y[2:3,] &lt;- matrix(c(1,1,8,12),nrow=2)
+&gt; y
+	[,1]	[,2]
+[1,]	1	4
+[2,]	1	8
+[3,]	1	12
+
+&gt; x &lt;- matrix(nrow=3,ncol=3)
+&gt; x[2:3,2:3] &lt;- cbind(4:5,2:3)	# copy
+&gt; x
+	[,1]	[,2]	[,3]
+[1,]	NA	NA	NA
+[2,]	NA	4	2
+[3,]	NA	5	3
+</pre>
+
+<br>
+
+<h4>Ex.04 : Name of Row and Column</h4>
+
+<pre style="padding-left: 30pt">&gt; z &lt;- matrix(c(1,2,3,4),nrow=2)
+&gt; z
+    [,1]	[,2]
+[1,]	1	3
+[2,]	2	4
+&gt; colnames(z)
+NULL
+&gt; colnames(z) &lt;- c("a","b")
+&gt; z
+	a	b
+[1,]	1	3
+[2,]	2	4
+&gt; colnames(z)
+[1]	"a"	"b"
+&gt; z[,"a"]
+[1]	1	2
+</pre>
+
+<br>
+
+<h4>Ex.05 : Demension Reduction</h4>
+
+<pre style="padding-left: 30pt">&gt; z &lt;- matrix(1:8,nrow=4)
+&gt; z
+	 [,1] [,2]
+[1,]    1    5
+[2,]    2    6
+[3,]    3    7
+[4,]    4    8
+
+&gt; r &lt;-z[2,]
+&gt; r
+[1] 2 6
+
+&gt; attributes(z)
+$dim
+[1] 4 2
+&gt; attributes(r)
+NULL
+</pre>
+
+<p>
+<b>suppress dimension reducting using drop</b>
+</p>
+<pre style="padding-left: 30pt">&gt; r &lt;- z[2,, drop=F]	# Suppress dimension reduction, with the drop argument
+&gt; r
+	 [,1] [,2]
+[1,]    2    6
+
+&gt; dim(r)
+[1] 1 2
+</pre>
+
+<p>
+<b>suppress dimension reducting using as.matrix</b>
+</p>
+<pre style="padding-left: 30pt">&gt; u &lt;-c(1,2,3)
+&gt; v &lt;-as.matrix(u)
+&gt; v
+	[,1]
+[1,]    1
+[2,]    2
+[3,]    3
+</pre>
+
+<br>
+
+<h4>Ex.06 : Adding/Deleting Elements of Matrix</h4>
+
+<p>
+<b>cbind() </b>: adding
+</p>
+<pre style="padding-left: 30pt">&gt; one &lt;- c(1,1,1,1)
+&gt; z &lt;- matrix(c(1,2,3,4,1,1,0,0,1,0,1,0),nrow=4)
+&gt; z
+	 [,1] [,2] [,3]
+[1,]    1    1    1
+[2,]    2    1    0
+[3,]    3    0    1
+[4,]    4    0    0
+&gt; cbind(one, z)
+	 one      
+[1,]   1 1 1 1
+[2,]   1 2 1 0
+[3,]   1 3 0 1
+[4,]   1 4 0 0
+
+&gt; q &lt;- cbind(c(1,2),c(3,4))
+&gt; q
+	 [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+</pre>
+
+<p>
+<b>rbind()</b> : adding 
+</p>
+<pre style="padding-left: 30pt">&gt; p &lt;- rbind(c(1,2,c(3,4)))
+&gt; p
+	 [,1] [,2] [,3] [,4]
+[1,]    1    2    3    4
+</pre>
+
+<br>
+
+<p>
+<b>deleting row</b>
+</p>
+<pre style="padding-left: 30pt">&gt; m &lt;- matrix(1:6,nrow=3)
+&gt; m
+	 [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+&gt; m &lt;- m[c(1,3),]	# deleting second row
+&gt; m
+	 [,1] [,2]
+[1,]    1    4
+[2,]    3    6
+</pre>
+
+<br>
+
+<h4>Ex.07 : Filtering</h4>
+
+<pre style="padding-left: 30pt">
+&gt; h &lt;- matrix(c(1,2,3,4,5,6,7,8,9),nrow=3)
+&gt; h
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+&gt; mean(h[h[,2]&gt;4,1])
+[1] 2.5
+&gt; mean(h[h[,3]&lt;=8,2])
+[1] 4.5
+&gt; nrow(h[h[,3]&gt;7,])
+[1] 2
+&gt; nrow(h[h[,3]&gt;8,])
+NULL
+
+&gt; x &lt;-matrix(c(1,2,3,2,3,4),nrow=3)
+&gt; x
+	 [,1] [,2]
+[1,]    1    2
+[2,]    2    3
+[3,]    3    4
+&gt; x[x[,2] &gt;= 3,]
+	 [,1] [,2]
+[1,]    2    3
+[2,]    3    4
+
+&gt; j &lt;- x[,2] &gt;= 3
+&gt; j
+[1] FALSE  TRUE  TRUE
+&gt; x[j,]
+	 [,1] [,2]
+[1,]    2    3
+[2,]    3    4
+
+&gt; m &lt;- matrix(c(1,2,3,4,5,6),nrow=3)
+&gt; m
+	 [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+&gt; m[m[,1] &gt; 1,]
+	 [,1] [,2]
+[1,]    2    5
+[2,]    3    6
+&gt; m[m[,1] &gt; 1 &amp; m[,2] &gt; 5,]
+[1] 3 6
+</pre>
+
+<br>
+
+<h4>Ex.08 : Applying the Same Function to All Rows or Columns of a Matrix</h4>
+
+<p>
+<b>apply()</b> : 
+</p>
+<pre style="padding-left: 30pt">z &lt;- matrix(c(1,2,3,4,5,6), nrow=3)
+&gt; apply(z,2,mean)
+[1] 2 5
+
+&gt; f &lt;- function(x) x/c(2,8)
+&gt; y &lt;- apply(z,1,f)
+&gt; y
+	 [,1]  [,2] [,3]
+[1,]  0.5 1.000 1.50
+[2,]  0.5 0.625 0.75
+</pre>
+
+<p>
+ <b>sapply()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; z12 &lt;- function(z) return(c(z,z^2))
+&gt; sapply(1:8,z12)
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+[1,]    1    2    3    4    5    6    7    8
+[2,]    1    4    9   16   25   36   49   64
+</pre>
+
+<br>
+
+<h4>Ex.09 : Properties of Matrix</h4>
+
+<pre style="padding-left: 30pt">&gt; z &lt;- matrix(1:8,nrow=4)
+&gt; z
+	 [,1] [,2]
+[1,]    1    5
+[2,]    2    6
+[3,]    3    7
+[4,]    4    8
+&gt; length(z)
+[1] 8
+&gt; class(z)
+[1] "matrix"
+&gt; attributes(z)
+$dim
+[1] 4 2
+&gt; dim(z)
+[1] 4 2
+&gt; nrow(z)
+[1] 4
+&gt; ncol(z)
+[1] 2
+</pre>
+
+<br>
+
+<h4>Ex.10 : Transepose Matrix</h4>
+
+<pre style="padding-left: 30pt">&gt; m &lt;- matrix(c(1,2,3,4,5,6),nrow=3)
+&gt; m
+	 [,1] [,2]
+[1,]    1    4
+[2,]    2    5
+[3,]    3    6
+&gt; t(m)
+	 [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+</pre>
+
+<br>
+
+<h3 id="list">List</h3>
+
+<h4>Ex.01 : Generate</h4>
+
+<pre style="padding-left: 30pt">&gt; j &lt;- list(name="Joe", salary=55000, union=T)
+&gt; j
+$name
+[1] "Joe"
+
+$salary
+[1] 55000
+
+$union
+[1] TRUE
+</pre>
+
+<br>
+
+<h4>Ex.02 : List Tags and Values, and the unlist() Function</h4>
+
+<pre style="padding-left: 30pt">&gt; names(j)
+[1] "name" "salary" "union"
+</pre>
+
+<p>
+<b>unlist()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; ulj &lt;- unlist(j)
+&gt; ulj
+   name  salary   union 
+  "Joe" "55000"  "TRUE" 
+&gt; class(ulj)
+[1] "character"
+
+&gt; x &lt;- list(abc=2, de=5)
+&gt; name(x)
+Error: could not find function "name"
+&gt; names(x)
+[1] "abc" "de" 
+&gt; ulx &lt;- unlist(x)
+&gt; ulx
+abc  de 
+  2   5 
+&gt; class(ulx)
+[1] "numeric"
+</pre>
+
+<br>
+
+<h4>Ex.03 : Indexing of Lists</h4>
+
+<pre style="padding-left: 30pt">&gt; j
+
+$name
+[1] "Joe"
+
+$salary
+[1] 55000
+
+$union
+[1] TRUE
+
+&gt; j[[1]]
+[1] "Joe"
+
+&gt; j[2:3]
+
+$salary
+[1] 55000
+
+$union
+[1] TRUE
+</pre>
+
+<br>
+
+<h4>Ex.04 : Addinf/Deleting List Elements</h4>
+
+<pre style="padding-left: 30pt">&gt; z &lt;- list(a="abc",b=12)
+&gt; z
+$a
+[1] "abc"
+
+$b
+[1] 12
+
+&gt; z$c &lt;- 1	add element 3
+&gt; z
+$a
+[1] "abc"
+
+$b
+[1] 12
+
+$c
+[1] 1
+
+&gt; z[[1]] &lt;- NULL	# delete element 1
+&gt; z
+$b
+[1] 12
+
+$c
+[1] 1
+</pre>
+
+<br>
+
+<h4>Ex.05 : Applying the Same Function to All Element</h4>
+
+<p>
+<b>lapply()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; list(1:2,25:29)
+[[1]]
+[1] 1 2
+
+[[2]]
+[1] 25 26 27 28 29
+
+&gt; lb &lt;-list(1:3,25:27)
+&gt; lb
+[[1]]
+[1] 1 2 3
+
+[[2]]
+[1] 25 26 27
+
+&gt; lapply(lb,median)
+[[1]]
+[1] 2
+
+[[2]]
+[1] 26
+
+&gt; as.numeric(lapply(list(1:3,25:27),median))
+[1]  2 26
+</pre>
+
+<br>
+
+<h4>Ex.06 : Recursive Lists</h4>
+
+<pre style="padding-left: 30pt">&gt; b &lt;- list(u = 5, v = 12)
+&gt; c &lt;- list(w = 13)
+&gt; a &lt;- list(b,c)
+&gt; a
+[[1]]
+[[1]]$u
+[1] 5
+
+[[1]]$v
+[1] 12
+
+[[2]]
+[[2]]$w
+[1] 13
+</pre>
+
+<br>
+
+<h4>Ex.07 : Properties of List</h4>
+
+<pre style="padding-left: 30pt">&gt; length(j)
+[1] 3
+</pre>
+
+<br>
+
+<h3 id="data-frame">data.frame</h3>
+
+
+<h4>Ex.01 : Basic</h4>
+
+<p>
+<b>head()</b> : <br>
+</p>
+<pre style="padding-left: 30pt">
+&gt; head(women)<br>
+  height weight<br>
+1     58    115<br>
+2     59    117<br>
+3     60    120<br>
+4     61    123<br>
+5     62    126<br>
+6     63    129
+</pre>
+
+<p></p>
+
+<p>
+<b>rowMeans()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; rowMeans(women)
+ [1]  86.5  88.0  90.0  92.0  94.0  96.0  98.0 100.0 102.5 104.5 107.0 109.5
+[13] 112.0 115.0 118.0
+</pre>
+
+<p>
+<b>colMeans()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; colMeans(women)
+  height   weight 
+ 65.0000 136.7333
+</pre>
+
+<br>
+
+<p>
+<b>rbind()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; rbind(women,women)
+   height weight
+1      58    115
+2      59    117
+3      60    120
+4      61    123
+5      62    126
+6      63    129
+7      64    132
+8      65    135
+9      66    139
+10     67    142
+11     68    146
+12     69    150
+13     70    154
+14     71    159
+15     72    164
+16     58    115
+17     59    117
+18     60    120
+19     61    123
+20     62    126
+21     63    129
+22     64    132
+23     65    135
+24     66    139
+25     67    142
+26     68    146
+27     69    150
+28     70    154
+29     71    159
+30     72    164
+</pre>
+
+<br>
+
+<p>
+<b>cbind()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; cbind(women,women)
+   height weight height weight
+1      58    115     58    115
+2      59    117     59    117
+3      60    120     60    120
+4      61    123     61    123
+5      62    126     62    126
+6      63    129     63    129
+7      64    132     64    132
+8      65    135     65    135
+9      66    139     66    139
+10     67    142     67    142
+11     68    146     68    146
+12     69    150     69    150
+13     70    154     70    154
+14     71    159     71    159
+15     72    164     72    164
+</pre>
+
+<br>
+
+<h4>Ex.02 : General Operations</h4>
+
+<pre style="padding-left: 30pt">&gt; data &lt;- data.frame (id=1:3, weight=c(20,27,24))
+&gt; data
+  id weight
+1  1     20
+2  2     27
+3  3     24
+
+&gt; z &lt;- data.frame(cbind(c(1,2),c(3,4)))
+&gt; z
+  X1 X2
+1  1  3
+2  2  4
+
+&gt; x &lt;- matrix(c(1,2,3,4),nrow=2,ncol=2)
+&gt; x &lt;- data.frame(x)
+&gt; x
+  X1 X2
+1  1  3
+2  2  4
+</pre>
+
+<br>
+
+<h4>Ex.03 : Adding/Deleting Elements of Matrix</h4>
+
+<p>
+<b>Ways to add a column</b><br>
+</p>
+<pre style="padding-left: 30pt">
+data$size      &lt;- c("small", "large", "medium")
+data[["size"]] &lt;- c("small", "large", "medium")
+data["size"]   &lt;- c("small", "large", "medium")
+data[,"size"]  &lt;- c("small", "large", "medium")
+data$size      &lt;- 0
+</pre>
+<p></p>
+
+<p>
+<b>Ways to remove the column</b><br>
+</p>
+
+<pre style="padding-left: 30pt">
+data$size      &lt;- NULL
+data[["size"]] &lt;- NULL
+data["size"]   &lt;- NULL
+data[,"size"]  &lt;- NULL
+data[3]        &lt;- NULL
+data[,3]       &lt;- NULL
+data           &lt;- subset(data, select=-size)
+</pre>
+<p></p>
+
+<br>
+
+<h4>Ex.04 : Indexing</h4>
+
+<pre style="padding-left: 30pt">&gt; women[1,]
+  height weight
+1     58    115
+&gt; women[1,2]
+[1] 115
+&gt; women[c(1:3),2]
+[1] 115 117 120
+&gt; women[1:4,]
+  height weight
+1     58    115
+2     59    117
+3     60    120
+4     61    123
+&gt; women[-1:-10,]
+   height weight
+11     68    146
+12     69    150
+13     70    154
+14     71    159
+15     72    164
+</pre>
+
+<br>
+
+<h4>Ex.05 : Change Column Name</h4>
+
+<pre style="padding-left: 30pt">&gt; colnames(z) &lt;- c("good", "better")
+&gt; z
+  good better
+1    1      3
+2    2      4
+</pre>
+
+<br>
+<br>
+
+<h4>Ex.06 : Applying the Same Function to All Rows or Columns of a Matrix</h4>
+
+<pre style="padding-left: 30pt">&gt; apply(women,2,mean)
+  height   weight 
+ 65.0000 136.7333
+</pre>
+
+<br>
+
+<h4>Ex.07 : Properties of Data Frame</h4>
+
+<pre style="padding-left: 30pt">&gt; attributes(x)
+$names
+[1] "X1" "X2"
+
+$row.names
+[1] 1 2
+
+$class
+[1] "data.frame"
+
+&gt; dim(x)
+[1] 2 2
+</pre>
+
+<br>
+
+<h3 id="factor">factor</h3>
+
+<h4>Ex.01 : Creating factor</h4>
+
+<pre style="padding-left: 30pt">&gt; y &lt;- factor(c("a","b","a","a","b"))
+&gt; y
+[1] a b a a b
+Levels: a b
+&gt; class(f)
+Error: object 'f' not found
+&gt; class(y)
+[1] "factor"
+</pre>
+
+<br>
+
+<h4>Ex.02 : Converting</h4>
+
+<p>
+<b>as.vector()</b> : 
+</p>
+<pre style="padding-left: 30pt">&gt; yv &lt;- as.vector(y)
+&gt; yv
+[1] "a" "b" "a" "a" "b"
+&gt; class(yv)
+[1] "character"
+</pre>
+
+<br>
+
+<h4>Ex.03 : Select Level</h4>
+
+<pre style="padding-left: 30pt">&gt; yf &lt;- factor(y, levels=c("a"))
+&gt; yf
+[1] a    &lt;NA&gt; a    a    &lt;NA&gt;
+Levels: a
+</pre>
+
+<br>
+
+<h4>Ex.04 : Change the Level Value</h4>
+
+<pre style="padding-left: 30pt">&gt; levels(y) &lt;- c("two","one")
+&gt; y
+[1] two one two two one
+Levels: two one
+</pre>
+
+<br>
+
+<h3 id="table">table</h3>
+
+<h4>Ex.01 : Creating</h4>
+
+<pre style="padding-left: 30pt">data &lt;- data.frame (VoteX=c("Yes","Yes","No","Not Sure","No"), VoteLastTime=c("Yes","No","No","Yes","No"))
+&gt; data
+	 VoteX VoteLastTime
+1      Yes          Yes
+2      Yes           No
+3       No           No
+4 Not Sure          Yes
+5       No           No
+
+&gt; ct &lt;- table(data)
+&gt; ct
+		  VoteLastTime
+VoteX      No Yes
+  No        2   0
+  Not Sure  0   1
+  Yes       1   1
+
+&gt; class(ct)
+[1] "table"
+</pre>
+
+<br>
+
+<h4>Ex.02 : Converting</h4>
+
+<pre style="padding-left: 30pt">&gt; ctdf &lt;- as.data.frame(ct)
+&gt; ctdf
+	 VoteX VoteLastTime Freq
+1       No           No    2
+2 Not Sure           No    0
+3      Yes           No    1
+4       No          Yes    0
+5 Not Sure          Yes    1
+6      Yes          Yes    1
+&gt; class(ctdf)
+[1] "data.frame"
+</pre>
+
+<br>
+
+<h4>Ex.03 : Useage as Determination of Certain Condition</h4>
+
+<pre style="padding-left: 30pt">&gt; x &lt;- c (5,12,13,3,4,5)
+&gt; table(x==5)
+
+FALSE  TRUE 
+4     2
+</pre>
+
+<br>
+                
+     <h1 id="reference">Reference</h1>           
+                <ol class="list-bracket">
+<li>Norman Matlof(2009). The Art of R Programming. [<a href="http://heather.cs.ucdavis.edu/%7Ematloff/132/NSPpart.pdf" title="Down" class="http">Down</a>]</li>
+<li>William N(2014). An Introduction to R. [Down] [<a href="http://cran.r-project.org/doc/manuals/r-patched/R-intro.html" title="Link" class="http">Link</a>] [<a href="http://homepage.usask.ca/%7Echl948/doc/manual/R-intro-ko.html" title="Link.kr" class="http">Link.kr</a>]</li>
+<li>서민구(2013). R을 이용한 데이터 실무. [<a href="http://r4pda.co.kr/?ckattempt=1" title="D" class="http">D</a><a href="http://r4pda.co.kr/?ckattempt=1" title="own" class="http">own</a>]</li>
+</ol>
+                
+            </div>
 
 
     </div>
 
+
+
+    <div class="top"></div>
 
 
 
