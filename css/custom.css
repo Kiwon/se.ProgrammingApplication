@@ -172,6 +172,16 @@ div{
     
 }
 
+.h-350{
+    min-height: 350px;
+}
+.inheri{
+    background-color: inherit;
+}
+.inheri > div{
+    background-color: inherit;
+}
+
 .navbar-collapse, #cs-nav, .nav >li > a:visited{
     background-color: #EE7755;
     
