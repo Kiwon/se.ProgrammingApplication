@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.07 그래픽 구현 Visualization</title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -96,55 +103,338 @@
 
 
 
-
-
-
-
-
-
         <section class="row">
 
 
 
 
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
+            <div class="block toc">
+                <!--start of toc-->
 
 
+                <h1><strong>Week.07</strong> : 그래픽 구현 <small>Visualization</small></h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#graph-option">그래프 옵션 <small>Graph Option</small>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#title-of-graph-and-axis">그래프 제목 그리고 축 <small>Title of Graph and Axis</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#coordinate-value-and-range">좌표값 및 범위설정 Coordinate Value and Range
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#legend">범례 Legend
+                                </a>
+                            </li>                
+                            <li>
+                                <a target="_self" href="#graph-arrangement">그래프 배열 Graph Arrangement
+                                </a>
+                            </li>                
+                        </ul>
+                    </li>
+                    <li>
+                        <a target="_self" href="#type-of-graph">그래프 종료 <small>Type of Graph</small>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#line-graph">선 그래프 <small>Line Graph</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#scatter-plot">산포도 <small>Scatter Plot</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#barplot">막대 그래프 <small>Barplot</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#boxplot">상자그림 <small>Boxplot</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                            
+                    
+                </ul>
+           
+            </div>
+            <!--end of toc-->
+
+            
+            
+
+            <div class="block ">
+                <!-- start of contents-->
+       <h1 id="visualization">그래픽 구현 <small>Visualization</small></h1>
+
+<p>
+ R에는 기본적으로 그래프 구현 도구를 제공한다. 기본으로 제공하는 패키지 말고도, CRAN에 다른 여러 사람들이 많은 그래픽 패키지가 있지만, 여기서는 가장 기본적인 그래프 구현방법을 알아보도록 한다.
+</p>
+
+<h2 id="graph-option">그래프 옵션 <small>Graph Option</small></h2>
+
+<p>
+ 이전에 사용했던 강우유출 데이터를 이용하여 그래프를 그려보도록 한다.<br>
+6주차의 코드에 이어 다음과 같은 명령어로 그래프를 나타낼 수 있다.
+</p>
+	<pre><code class="r">plot(dat[,3], type = "b")</code></pre>
+	
+
+<br>
+
+<p>
+type은 그래프의 형태를 나타내며 속성값은 아래와 같다.<br>
+<i>type</i> : what type of plot should be drawn.  Possible types are<br><br>
+<u>p</u> : for <b>p</b>oints,<br>
+<u>l</u> : for <b>l</b>ines,<br>
+<u>b</u> : for <b>b</b>oth,<br>
+<u>c</u> : for the lines part alone of ‘"b"’,<br>
+<u>o</u> : for both ‘<b>o</b>verplotted’,<br>
+<u>h</u> : for ‘<b>h</b>istogram’ like (or ‘high-density’) vertical lines,<br>
+<u>s</u> : for stair <b>s</b>teps,<br>
+<u>S</u> : for other <b>S</b>teps, see ‘Details’ below,<br>
+<u>n</u> : for <b>n</b>o plotting.
 
 
+<br><br>
+<img class="img-responsive" src="index_files/plot_004.png" width="400">
+</p>
 
-            <div class="block "> <!-- start of contents-->
+<h3 id="title-of-graph-and-axis">그래프 제목 그리고 축 <small>Title of Graph and Axis</small></h3>
+
+<pre><code class="r">plot(dat[,3], type = "b", xlab = "time (hour)", ylab ="outflow (cm)",
+main="Hydrograph", sub="sub title")</code></pre>
+
+<p>
+</p>
+<p>
+<i>main</i> : an overall <b>title</b> for the plot<br>
+<i>sub</i> : a sub title for the plot<br>
+<i>xlab</i> : a title for the x axis<br>
+<i>ylab</i> : a title for the y axis
+
+</p>
+<br>
+<p>
+<img class="img-responsive"  src="index_files/plot_008.png" width="400">
+</p>
+
+<br>
+
+<h3 id="coordinate-value-and-range">좌표값 및 범위설정 <small>Coordinate Value and Range</small></h3>
+
+<pre><code class="r">plot(dat[,3], type = "b", xlab = "time (hour)", ylab ="outflow (cm)", 
+main="Hydrograph", sub="sub title", xlim=c(0,20), ylim=c(-0.5,7))</code></pre>
+
+<p>
+<i>xlim</i> : range of x axis<br>
+<i>ylim</i> : range of y axis
+</p><br>
+
+<p></p>
+
+<p>
+<img class="img-responsive"  src="index_files/plot_003.png" width="400">
+</p>
+
+<h3 id="legend">범례 <small>Legend</small></h3>
+<pre><code class="r">legend(0, max(dat[,3])+1, "flow", pch=1, lty=1)</code></pre>
+
+<p>
+</p>
+<p>
+<tt>0</tt> : x 좌표 위치<br>
+<tt>max(dat[,3])+1</tt> : y 좌표 위치<br>
+<tt>"flow"</tt> : 그래프 이름<br>
+<tt>pch=1</tt> : pont character<br>
+<tt>lty</tt> : line type
+
+</p>
+
+<p>
+<br>
+<img class="img-responsive"  src="index_files/plot_007.png" width="400">
+</p>
+
+<br>
+
+<h3 id="graph-arrangement">그래프 배열 Graph Arrangement</h3>
+
+<br>
+
+<pre><code class="r">
+par(mfrow=c(1, 2))
+plot(dat[,3], type = "b", xlab = "time (hour)", ylab ="outflow (cm)", 
+	main="Outflow", xlim=c(0,20), ylim=c(-0.5,max(dat[,2:3])))
+legend(0, max(dat[,2:3]), "flow", pch=1, lty=1);
+plot(dat[,2], type = "b", xlab = "time (hour)", ylab ="rainfall (cm)", 
+	main="Rainfall", xlim=c(0,20), ylim=c(-0.5,max(dat[,2:3])), pch=2, lty=2, col="red")
+legend(0, max(dat[,2:3]), "rain", pch=2, lty=2, col="red");
+</code></pre>
+
+<br>
+
+<p>
+<i>par</i> : 그래픽에 관련된 변수들을 제어한다. mfrow=c(1,2) : 레이아웃을 1행 2열로 나눈다.
+</p>
+<br>
+<p>
+<img class="img-responsive"  src="index_files/plot.png" width="500">
+</p>
+
+<h3 id="multiple-axis">여러 축 <small>Mutiple Axis</small></h3>
+
+<pre><code class="r">par(mar=c(5, 5, 5, 5) ) # to give a little more room for constructing the on the four side.
+barplot(dat[,2], xlim=c(0,20), ylim=c(max(dat[,2])*3,0), col=c(rgb(0.4,0.7,0.4)), axes=FALSE, ylab="")
+axis(2, at=0:max(dat[,2])*3, col=rgb(0.4,0.7,0.4)) # y axis left
+par(new=TRUE)
+plot(dat[,3], type="l",col="red", ylim=c(0,max(dat[,3])*1.5),axes=FALSE, ylab="", xlab="")
+axis(1, at=1:nrow(dat)) # x axis bottom
+axis(3, at=1:nrow(dat)) # x axis top
+axis(4, at=0:max(dat[,3])*1.5, col="red") # y axis right
+mtext(side = 1, line = 3, "Time (hour)")
+mtext(side = 2, line = 3, "Rainfall (cm)")
+mtext(side = 3, line = 3, "Time (hour)")
+mtext(side = 4, line = 3, "Flow (cm)")
+</code></pre>
+<br>
+
+<p>
+<img class="img-responsive"  src="index_files/plot_009.png" width="400">
+</p>
+
+<br>
+
+<h2 id="type-of-graph">그래프 종료 <small>Type of Graph</small></h2>
+
+<br>
+
+<h3 id="line-graph">선 그래프 Line Graph</h3>
+<pre><code class="r">## set up some fake test data
+time &lt;- seq(0,72,12)
+betagal.abs &lt;- c(0.05,0.18,0.25,0.31,0.32,0.34,0.35)
+cell.density &lt;- seq(0,6000,1000)
+
+## add extra space to right margin of plot within frame
+par(mar=c(5, 4, 4, 6) + 0.1)
+
+## Plot first set of data and draw its axis
+plot(time, betagal.abs, pch=16, axes=FALSE, ylim=c(0,1), xlab="", ylab="", 
+   type="b",col="black", main="Mike's test data")
+axis(2, ylim=c(0,1),col="black",las=1)  ## las=1 makes horizontal labels
+mtext("Beta Gal Absorbance",side=2,line=2.5)
+box()
+
+## Allow a second plot on the same graph
+par(new=TRUE)
+
+## Plot the second plot and put axis scale on right
+plot(time, cell.density, pch=15,  xlab="", ylab="", ylim=c(0,7000), 
+	axes=FALSE, type="b", col="red")
+## a little farther out (line=4) to make room for labels
+mtext("Cell Density",side=4,col="red",line=4) 
+axis(4, ylim=c(0,7000), col="red",col.axis="red",las=1)
+
+## Draw the time axis
+axis(1,pretty(range(time),10))
+mtext("Time (Hours)",side=1,col="black",line=2.5)  
+
+## Add Legend
+legend("topleft",legend=c("Beta Gal","Cell Density"),
+text.col=c("black","red"),pch=c(16,15),col=c("black","red"))
+</code></pre>
+
+<br>
+<p>
+<img class="img-responsive"  src="index_files/plot_006.png" width="400">
+</p>
+
+<h3 id="scatter-plot">산포도 <small>Scatter Plot</small></h3>
+
+<pre><code class="r">##  Set up plotting in two rows and three columns, plotting along rows first.
+par(mfrow=c(2, 2))
+##  The first plot is located in row 1, column 1:
+plot( rnorm(n=10), col = "red", main = "plot 1", cex.lab = 1.1 )
+plot( rnorm(n=20), col = "blue", main = "plot 2", cex.lab = 1.2 )
+plot( rnorm(n=30), col = "green", main = "plot 4", cex.lab = 1.3 )
+plot( rnorm(n=40), col = "yellow", main = "plot 4", cex.lab = 1.4 )
+</code></pre>
+<br>
+<p>
+<img class="img-responsive"  src="index_files/plot_005.png" width="400">
+</p>
+
+<h3 id="barplot">막대 그래프 <small>Barplot</small></h3>
+<pre><code class="r">x &lt;- c(3,2,6,8,4)
+barplot(x,border="tan2",
+names.arg=c("Jan","Feb","Mar","Apr","May"),xlab="Month", ylab="Revenue",density=c(0,5,20,50,100))
+</code></pre>
+<br>
+
+<p>
+<img class="img-responsive"  src="index_files/plot_010.png" width="400">
+</p>
+
+<h3 id="boxplot">상자 그림 Boxplot</h3>
+
+<pre><code class="r">data&lt;-data.frame(Stat11=rnorm(100,mean=3,sd=2),
+				 Stat21=rnorm(100,mean=4,sd=1),
+				 Stat31=rnorm(100,mean=6,sd=0.5),
+				 Stat41=rnorm(100,mean=10,sd=0.5),
+				 Stat12=rnorm(100,mean=4,sd=2),
+				 Stat22=rnorm(100,mean=4.5,sd=2),
+				 Stat32=rnorm(100,mean=7,sd=0.5),
+				 Stat42=rnorm(100,mean=8,sd=3),
+				 Stat13=rnorm(100,mean=6,sd=0.5),
+				 Stat23=rnorm(100,mean=5,sd=3),
+				 Stat33=rnorm(100,mean=8,sd=0.2),
+				 Stat43=rnorm(100,mean=4,sd=4)
+				 )
+
+boxplot(data, 
+		ylab ="Oxigen (%)", 
+		las = 2, 
+		col = c("red","sienna","palevioletred1","royalblue2",
+			"red","sienna","palevioletred1","royalblue2",
+			"red","sienna","palevioletred1","royalblue2"),
+		at = c(1,2,3,4, 6,7,8,9, 11,12,13,14), 
+		par(mar = c(12, 5, 4, 2) + 0.1), 
+		names = c("Station 1","Station 2","Station 3","Station 4",
+			"Station 1","Station 2","Station 3","Station 4",
+			"Station 1","Station 2","Station 3","Station 4")
+)
+mtext(side = 1, line = 6, "Time")
+</code></pre>
+<br>
+<p>
+<img class="img-responsive"  src="index_files/plot_002.png" width="400">
+</p>
 
 
-            </div> <!--- end of contents-->
+<br>
 
-        </section>
+<h1>Reference</h1>
 
-
-
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
+<p>
+</p><ol class="list-bracket">
+<li>Frank McCown(2007). Producing Simple Graphs with R [<a href="http://www.harding.edu/fmccown/r/" title="Link" class="http">Link</a>]</li>
+<li>Quick-R. Creating a Graph [<a href="http://www.statmethods.net/graphs/creating.html" title="Link" class="http">Link</a>]</li>
+<li>서민구(2013). R을 이용한 데이터 실무. [<a href="http://r4pda.co.kr/?ckattempt=1" title="D" class="http">D</a><a href="http://r4pda.co.kr/?ckattempt=1" title="own" class="http">own</a>]</li>
+</ol>
+<p></p>
 
             </div>
-        </div>
 
 
     </div>
 
+
+
+    <div class="top"></div>
 
 
 
