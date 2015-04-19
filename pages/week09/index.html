@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.09 중간고사 Midterm Exam</title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -96,55 +103,167 @@
 
 
 
-
-
-
-
-
-
         <section class="row">
 
 
 
 
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
+            <div class="block toc">
+                <!--start of toc-->
 
 
-
-
-
-            <div class="block "> <!-- start of contents-->
-
-
-            </div> <!--- end of contents-->
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
-
+                <h1><strong>Week.09</strong> : 중간고사 <small>Midterm Exam</small></h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#midterm-exam">중간고사 <small>Midterm Exam</small>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#data-info">데이터 정보 <small>Data Info</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#questions">문제 <small>questions</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </div>
+            <!--end of toc-->
+
+            
+            
+
+            <div class="block ">
+                <!-- start of contents-->
+      <h2>중간고사</h2>
+
+<br>
+
+<h3>데이터 정보</h3>
+
+<p>
+<a href="./stPre.kr.csv"><button type="button" class="btn btn-default btn-xs">Down</button></a>
+</p><ol style="padding-left: 30pt" start="1" type="1">
+<li><b>No</b> : number of sation</li>
+<li><b>ST_NAME_E</b> : station name in english</li>
+<li><b>ST_NAME_K</b> : station name in korean</li>
+<li><b>ST_CODE</b> : station code</li>
+<li><b>Control_og</b> : organization controlling station</li>
+<li><b>BS_CODE</b> : basic code</li>
+<li><b>Gage_type</b> : measurement tool type</li>
+<li><b>River_system</b> : river system of the station</li>
+<li><b>EL_m</b> : elevation of station</li>
+<li><b>Time_Siries</b> : availability of time siries data</li>
+<li><b>Daily_Siries</b> : availability of time siries data</li>
+<li><b>Longitude</b> : longitude with only degree</li>
+<li><b>Latitude</b> : latitude with only degree</li>
+<li><b>Longitude_dms</b> : longitude with degree, minute and second</li>
+<li><b>Latitude_dms</b> : latitude with degree, minute and second</li>
+<li><b>X_EPSG5186</b> : x coordinate on TM coordinate system</li>
+<li><b>Y_EPSG5186</b> : y coordinate on TM coordiinate system</li>
+</ol>
+<p></p>
+
+<h3>문제</h3>
+
+<p>
+</p><ol start="1" type="1">
+<li>강우과측소 데이터를 불러온다.<br>Load rainfall staion data into R</li>
+</ol>
+
+<p></p>
+
+<p>
+</p><ol start="2" type="1">
+<li>전체 강우관측소 개수를 세어 <tt>n.st</tt> 변수에 입력한다.<br>
+Count all rainfall station and define it as variable n.ts</li>
+</ol>
+
+<p></p>
+
+<p>
+</p><ol start="3" type="1">
+<li>각 통제 기관에 해당되는 관측소의 개수를 파악하여 <tt>n.st.eachOr</tt>에 입력한다. (plyr패키지의 count 함수 사용)<br>
+Find out how many staions each of organization controlling station has control and define it as variable <tt>n.st.eachOr</tt> (use 'count' function in 'plyr' package)</li>
+</ol>
+
+<p></p>
+
+<p>
+</p><ol start="4" type="1">
+<li>경도 E128~129, 위도 N36~N38 범위에 해당되는 관측소의 개수를 <tt>n.st.range</tt>에 입력한다. (for 문과 if 문 사용)<br>Determine how many staion is located in longitude E128~E129 and latitude N36~N38. And define it as variable <tt>n.st.range</tt> (use for loop, if statements)
+<br>
+<br>
+<img src="index_files/korea.jpg" width="200">
+</li>
+
+</ol>
+
+
+
+<p></p>
+
+<p>
+
+</p>
+
+
+<p></p>
+
+<p>
+</p><ol start="5" type="1">
+<li>두점 사이의 거리를 구하는 함수를 만들어라. (<b>input</b>: x1, y1, x2, y2. <b>output</b>: distance)<br>Make function which can determine the distance between two points.</li>
+</ol>
+
+<p></p>
+
+<p>
+</p><ol start="6" type="1">
+<li>대기(Daegi)관측소와 등매(Deungmae)관측소의 거리를 계산하라. (TM좌표계인 X_EPSG5186과 
+Y_EPSG5186 좌표값은 m단위이다. 좌표값을 직접 입력하지 않고 관측소 이름으로 좌표값을 가져온다. grep 함수를 
+사용한다.)
+<br>
+Determine the distance between Daegi station and Deungmae stattion 
+(those rows X_EPSG5186 Y_EPSG5186 are made up by TM Coordinate System 
+which is using meter distance. better not to use coordinates directly, 
+but use station name to get coordinates. use 'grep' function)
+
+</li>
+</ol>
+
+
+<p></p>
+
+<p>
+</p><ol start="7" type="1">
+<li>다음과 같은 그래프를 그린다. (names 한수를 사용하여 벡터 데이터에 이름을 할당한다. barplot을 이용하여 그래프를 그린다. )<br>
+Display plot like below (use functions 'barplot' and 'names' ) <br><br>
+<img src="index_files/barplot.png" width="300">
+</li>
+</ol>
+
+<p></p>
+
+<br>
+<br>
+
+<p>
+</p>
+
+<p></p>
+
+<br>
+           
+
 
 
     </div>
 
+
+
+    <div class="top"></div>
 
 
 
