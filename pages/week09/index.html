@@ -123,7 +123,11 @@
                                 </a>
                             </li>
                             <li>
-                                <a target="_self" href="#questions">문제 <small>questions</small>
+                                <a target="_self" href="#questions">문제 <small>Questions</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#answers">정답 R 코드 <small>Answers</small>
                                 </a>
                             </li>
                         </ul>
@@ -141,7 +145,7 @@
 
 <br>
 
-<h3>데이터 정보</h3>
+<h3 id="data-info">데이터 정보 <small>Data info</small></h3>
 
 <p>
 <a href="./temp.csv"><button type="button" class="btn btn-default btn-xs">Down</button></a>
@@ -166,7 +170,7 @@
 </ol>
 <p></p>
 
-<h3>문제</h3>
+<h3 id="questions">문제 <small>Questions</small></h3>
 
 <p>
 </p><ol start="1" type="1">
@@ -244,11 +248,56 @@ Display plot like below (use functions 'barplot' and 'names' ) <br><br>
 </li>
 </ol>
 
-<p></p>
+<h3 id="answers">정답 R 소스 코드<small> Answers</small></h3>
+<a href="./miderm.r"><button type="button" class="btn btn-default btn-xs">Down</button></a>    
+<p>
 
-<br>
-<br>
+	<pre><code class="r"># Packages ----------------------------------------------------------------
+library("plyr")
 
+# 1 Loading data -----------------------------------------------------------
+rm(list = ls()) # Remove all variable
+dat &lt;- read.csv("./stPre.kr.csv")
+
+# 2 counting number of sation ----------------------------------------------
+n.st &lt;- nrow(dat)
+
+# 3 counting number of station each by organization -----------------------
+n.st.eachOrg &lt;- count(dat, vars = "Control_og")
+
+# 4 counting number of station in the range ------------------------------
+n.st.range &lt;-0
+for(i in 1:n.st){
+	if(128&lt;=dat$Longitude[i] &amp;&amp; dat$Longitude[i] &lt;=129 &amp;&amp; 
+		36&lt;=dat$Latitude[i] &amp;&amp; dat$Latitude[i] &lt;= 38){
+		n.st.range &lt;- n.st.range +1}
+}
+
+# 5 Function calculating distance between two points ----------------------
+f.dis &lt;- function(x1, y1, x2, y2){
+	out &lt;- sqrt( (x1-x2)^2 + (y1-y2)^2 )
+	return(out)
+}
+
+# 6 Estimating distance between two stations -------------------------------
+st.1 &lt;- "Daegi"
+st.2 &lt;- "Deungmae"
+st.1.index &lt;- grep(st.1, dat$ST_NAME_E)
+st.2.index &lt;- grep(st.2, dat$ST_NAME_E)
+
+x1 &lt;- dat$X_EPSG5186[st.1.index]
+y1 &lt;- dat$Y_EPSG5186[st.1.index]
+x2 &lt;- dat$X_EPSG5186[st.2.index]
+y2 &lt;- dat$Y_EPSG5186[st.2.index]
+
+val.dis &lt;- f.dis(x1 = x1, y1 = y1, x2 = x2, y2 = y2)
+
+n.st.eachOrg.vec &lt;- n.st.eachOrg[,2]
+names(n.st.eachOrg.vec)&lt;- n.st.eachOrg[,1]
+
+barplot(n.st.eachOrg.vec, xlab = "Organization", ylab = "n", col=rgb(1,0.5,0.3), main ="Number of stations by organization" )
+</code></pre>
+</p>
 <p>
 </p>
 

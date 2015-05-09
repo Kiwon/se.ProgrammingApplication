@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.10 R 언어를 이용한 수치(개방법) Numerical Methods with R (Open Method) </title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -96,57 +103,254 @@
 
 
 
-
-
-
-
-
-
         <section class="row">
 
 
+            <div class="block toc">
+                <!--start of toc-->
 
 
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
-
-
-
-
-
-            <div class="block "> <!-- start of contents-->
-
-
-            </div> <!--- end of contents-->
+                <h1><strong>Week.10</strong> : R 언어를 이용한 수치(개방법) <small>Numerical Methods with R (Open Method)</small></h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#open-methods">개방법 <small>Open Methods</small>
+                    </li>
+                    <li>
+                        <a target="_self" href="#secant-method">할선법 <small>Secant Method</small>
+                    </li>
+                    <li>
+                        <a target="_self" href="#example">예제 : 사다리꼴 단면에서의 등류수심 <small>Example : Normal depth in a prismatic channel</small>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#code">R Example Code
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--end of toc-->
 
         </section>
 
+            <div class="block ">
+                <!-- start of contents-->
+<h1>R 언어를 이용한 수치(개방법) : Numerical Methods with R (Open Method)</h1>
+
+<br>
+
+<h2 id="open-methods">개방법 <small>Open Methods</small></h2>
+
+<br>
+
+<p>
+비선형방정식에서 반복계산을 통해 근을 구하는 방법 (특히, 고차 대수방정식, 초월함수).
+</p>
+
+<p>
+</p><ul>
+<li>특정한 구간 없이 한 개의 초기값에서 시작하여 해를 찾는 방법.</li>
+<li>수렴성이 항상 보장되지는 않음.</li>
+<li>수렴속도는 구간법에 비하여 빠름.</li>
+</ul>
+<p></p>
+
+<p>
+Numerical Methods with Applications(2011) 부교재에 다음의 개방법이 소개되어 있다. 
+</p>
+
+<p>
+</p><ol start="1" type="1">
+<li>BisectionMethod</li>
+<li>Newton-Raphson Method</li>
+<li>Secant Method</li>
+<li>False-Position Methos </li>
+</ol>
+<p></p>
+
+<p>
+이 중 보편적으로 많이 쓰이는 할선법(Secant Method)을 예제로 다루어본다.
+</p>
+
+<h2 id="secant-method">할선법 <small>Secant Method</small></h2>
+
+<p>
+할선법은 Newton-Raphson 방법을 수정한 것이다.
+</p>
+
+<p>
+할선법은 Newton-Raphson 방법을 수정한 것이다. <br>
+NR에서는 다음 해를 다래와 같은 반속식으로 산정한다.
+</p>
+
+<p>
+<img src="week10_files/equation.png">	(1) 
+</p>
+
+<p></p>
+
+<p>
+도함수는 다음과 같이 근사할 수 있다.
+</p>
+
+<p><img src="week10_files/equation001.png">	(2)
+</p>
 
 
+<p></p>
+
+<p>
+식(2)를 식(2)에 적용하면 다음과 같이 나타낼 수 있다.
+</p>
+
+<p><img src="week10_files/equation002.png">	(3)
+</p>
 
 
+<p></p>
+
+<p>
+위의 식을 할선법(secant method)이라 부른다.
+</p>
+
+<p>
+<img src="week10_files/secontMethod.png" width="300">
+</p>
+
+<p>
+<b>수렴오차</b>, <b>허용오차, 도함수허용오차</b>, <b>최대반복수</b> 그리고 <b>초기값</b>을 설정해 줘야 한다.
+</p>
+
+<br>
+
+<h2 id="example">예제 : 사다리꼴 단면에서의 등류수심 <small>Example : Normal depth in a prismatic channel</small></h2>
+
+<br>
+
+<p>
+사다리꼴 개수로 단면에서 등류수심을 구하는 예제를 통해 할선법을 활용해 본다.<br>
+예제 출처 : Ponce. onlinecalc [<a href="http://onlinecalc.sdsu.edu/onlinechannel01.php" title="Link" class="http">Link</a>]<br>
+<br>
+
+<img src="week10_files/onlinechannel_fig05-300.jpg"><br><br>
+<img src="week10_files/equation003.png">
+</p>
+
+<p>
+Q : 유출량 Flow discharge	<u>input</u><br>
+b : 바닥폭 Bottom width    <u>input</u><br>
+z : 측면경사 Side slope	<u>input</u><br>
+S : 수로경사 Bottom Slope	<u>input</u>	<br>
+n : 조도계수 Manning’s n	<u>input</u><br>
+k : Unit constant (k=1)	<u>input</u><br>
+A : 단면적 Area<br>
+P : 윤변 Wetted perimeter<br>
+R : 동수반경 Hydraulic radius<br>
+y<sub>n</sub> : 등류수심 Normal flow depth	<u>output</u>
+</p>
+
+<br>
+<br>
+
+<h3 id="code">R Example Code</h3>
+
+<br>
 
 
+<br>
+<pre><code class="r"># secont method -----------------------------------------------------------
+# 사다리꼴 개수로에서 등류수심 구하는 예제
+# q : 유출량 Flow discharge    input
+# btmW : 바닥폭 Bottom width    input
+# z : 측면경사 Side slope	input
+# s : 수로경사 Bottom Slope	input	
+# n : 조도계수 Manning’s n	input
+# a : 단면적 Area
+# p : 윤변 Wetted perimeter
+# r : 동수반경 Hydraulic radius
+# d : 수리심 Hydraulic depth
+# y : 등류수심 Normal flow depth	output
+
+# input -------------------------------------------------------------------
+q &lt;- 10
+btmW &lt;- 10
+z &lt;- 2
+s &lt;- 0.001
+n &lt;- 0.013 
+
+ae &lt;- 0.0005 # allowable error
+de &lt;- 0.00000000001 # derivated error
+loopMax = 3000 # maximum possible loop
+init = 1/10 # initial value
 
 
+# function ----------------------------------------------------------------
+f &lt;- function(y,q,b,z,s,n){
+	a &lt;- y*(b+z*y)
+	p &lt;- b+2*y*(1+z^2)^(1/2)
+	r &lt;- a/p
+	fx &lt;- 1/n*a*r^(2/3)*s^(1/2)-q
+	return(fx)
+}
 
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
+x1 &lt;- init # defining initial value
+
+
+# iteration ---------------------------------------------------------------
+for (i in 1:loopMax){
+	xc &lt;- x1+ de #
+	fx1 &lt;- f(y = x1, q = q, b = btmW, z = z, s = s, n = n )
+	fxc &lt;- f(y = xc, q = q, b = btmW, z = z, s = s, n = n )
+	df &lt;- (fx1-fxc)/(x1-xc)
+	x2 &lt;- x1 - fx1/df
+	e &lt;- abs((x2-x1)/x2)
+	if(e&lt;ae){
+		fin &lt;- x2
+		break
+	}
+	x1 &lt;- x2 
+	fin &lt;- x2
+}
+
+# output 
+out.y &lt;- fin
+out.a &lt;- fin*(btmW+z*fin)
+out.p &lt;- btmW+2*fin*(1+z^2)^(1/2)
+out.r &lt;- out.a/out.p
+</code></pre>
+
+<br>
+<br>
+
+<p>
+<b>결과</b><br>
+out.a : 6.43 <br>
+out.p : 12.58<br>
+out.r : 0.511<br>
+out.y : 0.577
+</p>
+
+<br>
+
+<h1>Reference</h1>
+
+<p>
+</p><ol class="list-bracket">
+<li>Autar K Kaw(2011). Numerical Methods with Applications, 2nd Edition [<a href="http://kiwon.github.io/se.ProgrammingApplication/doc/Autar.numericalAnalysisWithApplication.pdf" title="Down" class="http">Down</a>] [<a href="http://nm.mathforcollege.com/topics/textbook_index.html" title="Link" class="http">Link</a>]</li>
+<li>김창호. 수치해석이란 무엇인가? [<a href="http://apmath.kku.ac.kr/%7Ekimchang/" title="Link" class="http">Link</a>]</li>
+<li>Ponce. Onlinecalc [<a href="http://onlinecalc.sdsu.edu/onlinechannel02.php" title="Link" class="http">Link</a>]</li>
+</ol>
+<p></p>
+
+<br>
+      
 
             </div>
-        </div>
-
 
     </div>
 
-
-
+    <div class="top"></div>
 
 
 </body>
