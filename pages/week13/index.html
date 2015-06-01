@@ -13,7 +13,7 @@
     <!--    <meta name="viewport" content="width=1280">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Programming Application: week.01 공학프로그래밍의 이해</title>
+    <title>Programming Application: week.13 R 언어를 이용한 수치해석(수치 미분) : Numerical Methods with R (Numerical differentiation)  </title>
 
     <!-- icon -->
     <link rel="shortcut icon" href="../../img/poster.r.png">
@@ -32,57 +32,64 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/custom.js"></script>
     <!-- Basic layout and information -->
+    <!--code syntax highlight-->
+    <link rel="stylesheet" href="../../css/monokai_sublime.css">
+    <script src="../../js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!--
         Information
         describe page information
 
     -->
-
+    <base target="_blank">
 </head>
 
 <body>
-
+    <div class="top"></div>
     <div class="container" id="cs-nav">
-        <a class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
+        <a target="_self" class="navbar-brand" id="cs-home" href="../../">Programming Application</a>
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"> F
 
         </button>
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="../syllabus">SYLLABUS</a>
+                <li><a target="_self" href="../syllabus">SYLLABUS</a>
                 </li>
-                <li><a href="../start">START</a>
+                <li><a target="_self" href="../start">START</a>
                 </li>
 
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
+                    <a target="_self" class="dropdown-toggle" data-toggle="dropdown" href="#">COURSE
           <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../week01">week.01 : 공학프로그래밍의 이해</a>
+                        <li><a target="_self" href="../week01">week.01 : 공학프로그래밍의 이해</a>
                         </li>
-                        <li><a href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
+                        <li><a target="_self" href="../week02">week.02 : Linux/Unix-Like OS 및 응용 소프트웨어</a>
                         </li>
-                        <li><a href="../week03">week.03 : 웹과 위키시스템</a>
+                        <li><a target="_self" href="../week03">week.03 : 웹과 위키시스템</a>
                         </li>
-                        <li><a href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
+                        <li><a target="_self" href="../week04">week.04 : R 프로그래밍 및 개발환경</a>
                         </li>
-                        <li><a href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
+                        <li><a target="_self" href="../week05">week.05 : R 프로그래밍 기초 및 데이터 타입</a>
                         </li>
-                        <li><a href="../week06">week.06 : 데이터 파일 및 구조</a>
+                        <li><a target="_self" href="../week06">week.06 : 데이터 파일 및 구조</a>
                         </li>
-                        <li><a href="../week07">week.07 : 그래픽 구현</a>
+                        <li><a target="_self" href="../week07">week.07 : 그래픽 구현</a>
                         </li>
-                        <li><a href="../week08">week.08 : R 함수 및 패키지</a>
+                        <li><a target="_self" href="../week08">week.08 : R 함수 및 패키지</a>
                         </li>
-                        <li><a href="../week09">week.09 : 중간고사</a> </li>
-                        <li><a href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
-                        <li><a href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
-                        <li><a href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
-                        <li><a href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
-                        <li><a href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
-                        <li><a href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
+                        <li><a target="_self" href="../week09">week.09 : 중간고사</a> </li>
+                        <li><a target="_self" href="../week10">week.10 : R 언어를 이용한 수치(개방법)</a> </li>
+                        <li><a target="_self" href="../week11">week.11 : R 언어를 이용한 수치해석(보간법)</a> </li>
+                        <li><a target="_self" href="../week12">week.12 : R 언어를 이용한 수치해석(회귀분석)</a> </li>
+                        <li><a target="_self" href="../week13">week.13 : R 언어를 이용한 수치해석(수치 미분)</a> </li>
+                        <li><a target="_self" href="../week14">week.14 : R 언어를 이용한 수치해석(수치 적분)</a> </li>
+                        <li><a target="_self" href="../week15">week.15 : 최종 프로젝트 발표 및 토론</a> </li>
                     </ul>
                 </li>
 
@@ -93,60 +100,162 @@
     </div>
     <div class="container">
 
-
-
-
-
-
-
-
-
-
         <section class="row">
+	
+            <div class="block toc">
+                <!--start of toc-->
 
-
-
-
-            <div class="block toc"> <!--start of toc-->
-                
-                <p class="not">Not Prepared <br> Wait</p>
-                
-            </div>    <!--end of toc-->
-
-
-
-
-
-            <div class="block "> <!-- start of contents-->
-
-
-            </div> <!--- end of contents-->
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-        <div class="row">
-            <div class="col-sm-12, block" , id="cs-footer">
-                <p>All content & design on this site Copyright © 2015, <strong>Kiwon</strong>
-                </p>
-                <p>kiwon@null.net</p>
-
+                <h1><strong>Week.12</strong> : R 언어를 이용한 수치해석(회귀분석) <small>Numerical Methods with R (Regression Analysis)</small></h1>
+                <b>Table of Contents</b>
+                <ul class="numeric-decimals">
+                    <li>
+                        <a target="_self" href="#high-accuracy-differentiation-formulas">고정도 미분공식 <small>High-Accuracy Differentiation Formulas</small></a>
+                        <ul>
+                            <li>
+                                <a target="_self" href="#forward-finite-divided-difference-frmulas">전향 유한차분 공식 <small>Forward Finite-Divided-Difference Formulas</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#backward-finite-divided-difference-frmulas">후향 유한차분 공식 <small>Backward Finite-Divided-Difference Formulas</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_self" href="#centered-finite-divided-difference-frmulas">중심 유한차분 공식 <small>Centered Finite-Divided-Difference Formulas</small>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a target="_self" href="#ex">중심 유한차분 예제 <small>Example</small>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </div>
+            <!--end of toc-->
+
+            <div class="block ">
+            <h1>R 언어를 이용한 수치해석(수치 미분) <small>Numerical Methods with R (Numerical differentiation)</small></h1>
+
+<br>
+
+<h2 id="high-accuracy-differentiation-formulas">고정도 미분공식 High-Accuracy Differentiation Formulas</h2>
+
+<br>
+
+<p>
+ 고정도 미분공식은 Taylor 급수 전개로 부터 유도된다. 고정도 미분공식은 함수의 형태를 알거나 데이터의 간격이 등간격일 경우 사용한다.
+</p>
+
+<h3 id="forward-finite-divided-difference-frmulas">전향 유한차분 공식 Forward Finite-Divided-Difference Formulas</h3>
+
+<br>
+
+<p>
+후자가 Taylor 급수 전개에 더 많은 항들이 포함되어 결과적으로 더 정확하다.
+</p>
+
+<p>
+<img src="index_files/equation.png">
+</p>
 
 
+<p></p>
+
+<br>
+
+<h3 id="backward-finite-divided-difference-frmulas">후향 유한차분 공식 Backward Finite-Divided-Difference Formulas</h3>
+
+<br>
+
+<p>
+후자가 Taylor 급수 전개에 더 많은 항들이 포함되어 결과적으로 더 정확하다.<br>
+</p>
+
+
+<p>
+    <img src="index_files/equation001.png">
+</p>
+
+<br>
+
+<h3 id="centered-finite-divided-difference-frmulas">중심 유한차분 공식 Centered Finite-Divided-Difference Formulas</h3>
+
+<br>
+
+<p>
+후자가 Taylor 급수 전개에 더 많은 항들이 포함되어 결과적으로 더 정확하다.
+</p>
+
+<p>
+<img src="index_files/equation002.png">
+</p>
+
+<p></p>
+
+<br>
+
+<h4 id="ex">중심 유한차분 예제 Example</h4>
+
+<br>
+
+<p>
+<img src="index_files/equation003.png">
+</p>
+
+
+<p></p>
+
+<p>
+x = 5, h = 0.25
+</p>
+
+
+<p></p>
+
+<pre><code class="r">rm(list = ls()) # Remove all variable
+
+f &lt;- function(x) {
+	y &lt;- -0.1*x^4 - 0.15*x^3 - 0.5*x^2 - 0.25*x + 1.2
+	return(y)
+}
+
+cen.f &lt;-function (func, x, h){
+	x.m2 &lt;- x-2*h
+	x.m1 &lt;- x-h
+	x.p1 &lt;- x+h
+	x.p2 &lt;- x+2*h
+	der &lt;- (-func(x.p2) + 8*func(x.p1)-8*func(x.m1)+func(x.m2))/(12*h)
+	return(der)
+}
+
+x &lt;- 0.5
+h &lt;- 0.25
+der &lt;- cen.f(f, x, h)
+
+der</code></pre>
+<p>
+<b>output</b> : -0.9125
+</p>
+
+<p></p>
+
+<br>
+
+<h1>Reference</h1>
+
+<p>
+</p><ol class="list-bracket">
+<li>Autar K Kaw(2011). Numerical Methods with Applications, 2nd Edition [<a href="http://kiwon.github.io/se.ProgrammingApplication/doc/Autar.numericalAnalysisWithApplication.pdf" title="Down" class="http">Down</a>] [<a href="http://nm.mathforcollege.com/topics/textbook_index.html" title="Link" class="http">Link</a>]</li>
+<li>Steven C. Chapra(2008). Raymond P. Canale. Numerical Method for Engineering 6th</li>
+</ol>
+<p></p>
+            </div>
+</section>
     </div>
 
-
-
+    <div class="top"></div>
 
 
 </body>
